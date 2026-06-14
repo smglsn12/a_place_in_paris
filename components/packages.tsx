@@ -9,7 +9,7 @@ export function Packages() {
         <SectionHeading
           eyebrow="Packages"
           title="Choose how much you'd like me to handle"
-          description="Transparent, flat pricing. Third-party costs like deposits and agency fees are always quoted separately, never marked up."
+          description="Three ways to work together. Tell me what you need and I'll send a quote — third-party costs like deposits and agency fees are always separate and never marked up."
         />
 
         <div className="mt-14 grid items-start gap-6 lg:grid-cols-3">
@@ -37,17 +37,6 @@ export function Packages() {
                 {pkg.tagline}
               </p>
 
-              <div className="mt-6 flex items-baseline gap-2">
-                <span className="font-serif text-4xl font-semibold">
-                  {pkg.price}
-                </span>
-                <span
-                  className={`text-sm ${pkg.featured ? "text-cream/60" : "text-mist"}`}
-                >
-                  {pkg.cadence}
-                </span>
-              </div>
-
               <ul className="mt-7 flex flex-1 flex-col gap-3">
                 {pkg.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-2.5 text-sm">
@@ -73,7 +62,7 @@ export function Packages() {
                     : "bg-ink text-cream"
                 }`}
               >
-                {pkg.price === "Custom" ? "Request a quote" : "Get started"}
+                Request a quote
               </a>
             </div>
           ))}

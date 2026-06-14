@@ -143,8 +143,6 @@ export const PROCESS_STEPS: ProcessStep[] = [
 export type Package = {
   name: string;
   tagline: string;
-  price: string;
-  cadence: string;
   features: string[];
   featured?: boolean;
 };
@@ -153,8 +151,6 @@ export const PACKAGES: Package[] = [
   {
     name: "Search Starter",
     tagline: "Guidance for the confident DIY hunter",
-    price: "$390",
-    cadence: "one-time",
     features: [
       "Neighborhood & budget consultation",
       "Personalized search strategy",
@@ -166,8 +162,6 @@ export const PACKAGES: Package[] = [
   {
     name: "Full Search",
     tagline: "My signature, end-to-end apartment hunt",
-    price: "$1,490",
-    cadence: "until you sign",
     featured: true,
     features: [
       "Everything in Search Starter",
@@ -181,8 +175,6 @@ export const PACKAGES: Package[] = [
   {
     name: "Search & Settle",
     tagline: "The full hunt plus a smooth landing",
-    price: "Custom",
-    cadence: "tailored",
     features: [
       "Everything in Full Search",
       "Guarantor & insurance setup",
