@@ -33,8 +33,8 @@ npm start        # serve the production build
 ## Routes
 
 - `/`: home (hero, services overview, process, packages, testimonials, FAQ, contact form)
-- `/services`: detailed breakdown of each relocation service + pricing
-- `/about`: story, values, and stats
+- `/services`: detailed breakdown of each apartment-finding service, plus the packages
+- `/about`: Jill's bio and photo, values, and stats
 - `/api/contact`: POST endpoint (Route Handler) that delivers the contact form
 
 ## Structure
@@ -52,7 +52,7 @@ components/
   hero.tsx            Hero + stat card (inline SVG skyline)
   services.tsx        Six service cards (home overview)
   process.tsx         Four-step "how it works" band
-  packages.tsx        Three pricing tiers
+  packages.tsx        Three service packages (quote-based)
   testimonials.tsx    Client quotes
   faq.tsx             Accordion (client component)
   contact.tsx         Discovery-call form (posts to /api/contact)
@@ -102,7 +102,7 @@ vercel --prod   # production deploy
 
 ## Notes
 
-- Site copy lives in `lib/content.ts`: edit there to update services, pricing,
+- Site copy lives in `lib/content.ts`: edit there to update services, packages,
   testimonials, FAQs, and values without touching markup.
-- All content (names, stats, address, phone) is placeholder: replace with the
-  real business details before launch.
+- Package contents are illustrative; confirm they match your real offering, and
+  set pricing via the "Request a quote" flow, before launch.
