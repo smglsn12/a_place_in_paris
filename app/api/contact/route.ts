@@ -40,10 +40,22 @@ export async function POST(request: Request) {
   // settings) real emails will be delivered to your inbox.
   if (!accessKey) {
     console.warn(
-      "[contact] WEB3FORMS_ACCESS_KEY is not set; logging submission instead of sending.",
+      "[contact] WEB3FORMS_ACCESS_KEY is not set; not sending.",
       { name, email, timeline, message },
     );
-    return NextResponse.json({ ok: true, delivered: false });
+    // In dev, let the success flow work without a key so the UI is testable.
+    // In production, never fake success: tell the visitor how to reach Jill.
+    if (process.env.NODE_ENV !== "production") {
+      return NextResponse.json({ ok: true, delivered: false });
+    }
+    return NextResponse.json(
+      {
+        ok: false,
+        error:
+          "Our contact form isn't fully set up yet. Please email jillfindsyourparisapt@gmail.com directly.",
+      },
+      { status: 503 },
+    );
   }
 
   // ── Web3Forms (default) ────────────────────────────────────────────────────
@@ -68,7 +80,11 @@ export async function POST(request: Request) {
     if (!res.ok || !data.success) {
       console.error("[contact] Web3Forms error:", data);
       return NextResponse.json(
-        { ok: false, error: "We couldn't send your message. Please try again." },
+        {
+          ok: false,
+          error:
+            "We couldn't send your message. Please try again, or email jillfindsyourparisapt@gmail.com directly.",
+        },
         { status: 502 },
       );
     }
