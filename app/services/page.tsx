@@ -8,16 +8,16 @@ import { CtaBand } from "@/components/cta-band";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Detailed relocation services for Americans moving to Paris — visas and immigration, home search, banking and admin, healthcare, schools, and settling in.",
+    "How I find your Paris apartment — neighborhood matching, listing search, in-person viewings, rental dossier and lease support, guarantor solutions, and move-in help.",
 };
 
 export default function ServicesPage() {
   return (
     <main>
       <PageHero
-        eyebrow="What we handle"
-        title="Every step of your move, in expert hands"
-        description="Pick the pieces you need or hand us the keys to all of it. Here's exactly what each part of the relocation looks like when we run it for you."
+        eyebrow="How I help"
+        title="Every step of the apartment hunt, handled"
+        description="Pick the help you need or hand me the whole search. Here's exactly what each part of finding your Paris apartment looks like when I run it for you."
       />
 
       <section className="pb-8">
@@ -58,8 +58,8 @@ export default function ServicesPage() {
 
       <Packages />
       <CtaBand
-        title="Not sure which services you need?"
-        description="That's what the discovery call is for. We'll listen to your situation and recommend exactly the support that fits — nothing more."
+        title="Not sure which package you need?"
+        description="That's what the discovery call is for. I'll listen to your situation and recommend exactly the help that fits — nothing more."
       />
     </main>
   );

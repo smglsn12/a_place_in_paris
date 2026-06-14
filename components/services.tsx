@@ -7,9 +7,9 @@ export function Services() {
     <section id="services" className="scroll-mt-20 py-20 sm:py-28">
       <div className="container-page">
         <SectionHeading
-          eyebrow="What we handle"
-          title="Everything between the dream and the doorstep"
-          description="One team for the whole move. Pick the pieces you need, or hand us the keys to all of it."
+          eyebrow="How I help"
+          title="Everything between the listing and the lease"
+          description="Pick the help you need, or hand me the whole search — from the first shortlist to the keys in your hand."
         />
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -44,7 +44,7 @@ export function Services() {
             href="/services"
             className="group inline-flex items-center gap-2 text-sm font-semibold text-brand transition-colors hover:text-ink"
           >
-            See exactly how each service works
+            See exactly how each part of the search works
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </a>
         </div>

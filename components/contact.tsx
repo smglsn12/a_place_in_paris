@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AlertCircle, ArrowRight, CheckCircle2, Loader2, Mail, MapPin, Phone } from "lucide-react";
+import { AlertCircle, ArrowRight, CheckCircle2, Loader2, Mail } from "lucide-react";
 
 const TIMELINES = [
   "Just exploring",
@@ -57,7 +57,7 @@ export function Contact() {
                 Book your free discovery call
               </h2>
               <p className="mt-4 max-w-sm leading-relaxed text-cream/70">
-                Tell us a little about your plans. We&apos;ll reply within one
+                Tell me a little about your plans. I&apos;ll reply within one
                 business day with next steps and a time to talk — no obligation.
               </p>
             </div>
@@ -65,15 +65,9 @@ export function Contact() {
             <ul className="relative flex flex-col gap-4 text-sm">
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-gold-soft" />
-                bonjour@aplaceinparis.com
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone size={18} className="text-gold-soft" />
-                +33 1 84 80 00 00
-              </li>
-              <li className="flex items-center gap-3">
-                <MapPin size={18} className="text-gold-soft" />
-                12 Rue de Rivoli, 75004 Paris
+                <a href="mailto:jillfindsyourparisapt@gmail.com" className="hover:underline">
+                  jillfindsyourparisapt@gmail.com
+                </a>
               </li>
             </ul>
           </div>
@@ -87,8 +81,8 @@ export function Contact() {
                   Merci — we&apos;ve got it.
                 </h3>
                 <p className="mt-3 max-w-sm text-mist">
-                  Your message is on its way to our team. Expect a reply within
-                  one business day. À bientôt!
+                  Your message is on its way to me. Expect a reply within one
+                  business day. À bientôt!
                 </p>
               </div>
             ) : (

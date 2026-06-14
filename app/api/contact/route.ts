@@ -93,7 +93,7 @@ export async function POST(request: Request) {
  *    const resend = new Resend(process.env.RESEND_API_KEY);
  *    await resend.emails.send({
  *      from: "A Place in Paris <hello@yourdomain.com>",
- *      to: "bonjour@aplaceinparis.com",
+ *      to: "jillfindsyourparisapt@gmail.com",
  *      replyTo: email,
  *      subject: `New discovery-call request from ${name}`,
  *      text: `Name: ${name}\nEmail: ${email}\nTimeline: ${timeline}\n\n${message}`,

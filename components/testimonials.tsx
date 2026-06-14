@@ -8,11 +8,11 @@ export function Testimonials() {
       <div className="container-page">
         <SectionHeading
           eyebrow="Client stories"
-          title="Arrivals worth raising a glass to"
-          description="A few of the families and dreamers who now call Paris home."
+          title="Keys handed over, glasses raised"
+          description="The first clients who now call a Paris apartment home."
         />
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mx-auto mt-14 grid max-w-4xl gap-6 sm:grid-cols-2">
           {TESTIMONIALS.map((t) => (
             <figure
               key={t.name}

@@ -8,8 +8,8 @@ export function Packages() {
       <div className="container-page">
         <SectionHeading
           eyebrow="Packages"
-          title="Choose how much you'd like us to carry"
-          description="Transparent, flat pricing. Government and third-party fees are always quoted separately, never marked up."
+          title="Choose how much you'd like me to handle"
+          description="Transparent, flat pricing. Third-party costs like deposits and agency fees are always quoted separately, never marked up."
         />
 
         <div className="mt-14 grid items-start gap-6 lg:grid-cols-3">

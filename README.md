@@ -1,8 +1,8 @@
 # A Place in Paris
 
-A modern, responsive marketing site for a boutique relocation service that helps
-US citizens move to Paris. Built with **Next.js (App Router)**, **Tailwind CSS v4**,
-and **Lucide React** icons.
+A modern, responsive marketing site for Jill's boutique **apartment-finding
+service** that helps US citizens find a home in Paris. Built with **Next.js
+(App Router)**, **Tailwind CSS v4**, and **Lucide React** icons.
 
 ## Stack
 

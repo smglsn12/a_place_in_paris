@@ -12,8 +12,8 @@ export function Process() {
       <div className="container-page relative">
         <SectionHeading
           eyebrow="How it works"
-          title="A calm, clear path from here to there"
-          description="No mystery, no missed steps. You always know what's done, what's next, and what we need from you."
+          title="A calm, clear path to your front door"
+          description="No mystery, no missed steps. You always know what's done, what's next, and what I need from you."
           inverted
         />
 

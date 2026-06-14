@@ -9,8 +9,8 @@ export function SiteFooter() {
           <div className="max-w-sm">
             <Logo inverted />
             <p className="mt-4 text-sm leading-relaxed text-cream/60">
-              A boutique relocation concierge helping US citizens move to Paris
-              with clarity and calm. Based in the 4th, working across France.
+              A boutique apartment-finding service helping US citizens find the
+              right home in Paris — personally, one client at a time.
             </p>
           </div>
 
@@ -33,19 +33,15 @@ export function SiteFooter() {
             <h3 className="text-xs font-semibold tracking-[0.18em] text-gold-soft uppercase">
               Get in touch
             </h3>
-            <a href="mailto:bonjour@aplaceinparis.com" className="text-sm text-cream/70 transition-colors hover:text-cream">
-              bonjour@aplaceinparis.com
+            <a href="mailto:jillfindsyourparisapt@gmail.com" className="text-sm text-cream/70 transition-colors hover:text-cream">
+              jillfindsyourparisapt@gmail.com
             </a>
-            <a href="tel:+33184800000" className="text-sm text-cream/70 transition-colors hover:text-cream">
-              +33 1 84 80 00 00
-            </a>
-            <span className="text-sm text-cream/70">12 Rue de Rivoli, 75004 Paris</span>
           </div>
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-cream/10 pt-6 text-xs text-cream/50 sm:flex-row">
           <p>© {2026} A Place in Paris. All rights reserved.</p>
-          <p>Not affiliated with any government agency. Independent relocation advisors.</p>
+          <p>Independent apartment-finding service for newcomers to Paris.</p>
         </div>
       </div>
     </footer>

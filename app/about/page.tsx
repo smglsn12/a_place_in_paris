@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { VALUES, ABOUT_STATS } from "@/lib/content";
 import { PageHero } from "@/components/page-hero";
 import { CtaBand } from "@/components/cta-band";
@@ -6,57 +7,65 @@ import { CtaBand } from "@/components/cta-band";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "A Place in Paris is a boutique relocation concierge founded by Americans who made the move themselves. Meet the team that turns French bureaucracy into a clear path home.",
+    "Meet Jill — the apartment finder behind A Place in Paris. A US immigrant with a business degree and real estate background, helping fellow Americans find their home in Paris.",
 };
 
 export default function AboutPage() {
   return (
     <main>
       <PageHero
-        eyebrow="Our story"
-        title="We made the move too — then made it our work"
-        description="A Place in Paris began with a single overwhelming relocation: our own. We turned a decade of hard-won know-how into the service we wish we'd had."
+        eyebrow="About"
+        title="Meet your Paris apartment finder"
+        description="A Place in Paris is a personal service — just me, helping fellow Americans find a home in the city I've come to love."
       />
 
-      {/* Story */}
+      {/* Bio + photo */}
       <section className="pb-8">
-        <div className="container-page grid gap-12 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
-          <div className="flex flex-col gap-5 text-lg leading-relaxed text-ink-soft">
-            <p>
-              In 2014, our founders left careers in the US to chase a long-held
-              dream of living in Paris. What followed was a year of mistranslated
-              forms, missed appointments, rejected applications, and the slow,
-              humbling education that French administration gives every newcomer.
-            </p>
-            <p>
-              They got there in the end — apartment, bank account, residence
-              permit, a neighborhood café that knew their order. And friends back
-              home started asking the same question: <em>how did you actually do it?</em>
-            </p>
-            <p>
-              A Place in Paris is the answer, built into a service. Today we&apos;re a
-              small team of relocation advisors, French-administration specialists,
-              and on-the-ground fixers who have collectively guided hundreds of
-              American families through the move — so their year-one looks a lot
-              calmer than ours did.
-            </p>
+        <div className="container-page grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+          <div className="relative mx-auto w-full max-w-sm">
+            <div className="absolute -inset-3 -z-10 rotate-3 rounded-[2rem] bg-brand/5" />
+            <div className="relative aspect-[3/4] overflow-hidden rounded-[1.75rem] border border-ink/10 shadow-card">
+              <Image
+                src="/founder.JPG"
+                alt="Jill, the founder of A Place in Paris"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 self-start">
-            {ABOUT_STATS.map((stat) => (
-              <div
-                key={stat.label}
-                className="rounded-2xl border border-ink/10 bg-white p-6 text-center shadow-soft"
-              >
-                <div className="font-serif text-3xl font-semibold text-brand">
-                  {stat.value}
-                </div>
-                <div className="mt-1.5 text-sm leading-tight text-mist">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
+          <div className="flex flex-col gap-5 text-lg leading-relaxed text-ink-soft">
+            <p className="font-serif text-2xl text-ink sm:text-3xl">
+              Hello! I&apos;m Jill and I&apos;m excited to work with you!
+            </p>
+            <p>
+              With a business degree from San Francisco State University,
+              including extensive real estate coursework, and my several months
+              of experience navigating the apartment hunt space in Paris as a US
+              immigrant, I am ready to help you find your home in Paris!
+            </p>
           </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="py-16">
+        <div className="container-page grid grid-cols-2 gap-4 sm:grid-cols-4">
+          {ABOUT_STATS.map((stat) => (
+            <div
+              key={stat.label}
+              className="rounded-2xl border border-ink/10 bg-white p-6 text-center shadow-soft"
+            >
+              <div className="font-serif text-3xl font-semibold text-brand">
+                {stat.value}
+              </div>
+              <div className="mt-1.5 text-sm leading-tight text-mist">
+                {stat.label}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -66,10 +75,10 @@ export default function AboutPage() {
           <div className="max-w-2xl">
             <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.22em] text-gold uppercase">
               <span className="h-px w-8 bg-current opacity-60" />
-              What guides us
+              What guides me
             </span>
             <h2 className="mt-5 font-serif text-3xl leading-tight font-semibold text-ink sm:text-4xl">
-              The principles behind every move
+              The principles behind every search
             </h2>
           </div>
 
@@ -97,8 +106,8 @@ export default function AboutPage() {
       </section>
 
       <CtaBand
-        title="Let's get you to Paris"
-        description="Whether you're years out or already packing, a short call is the best first step. We'd love to hear where you're headed."
+        title="Let's find your place in Paris"
+        description="Whether you're months out or already packing, a short call is the best first step. I'd love to hear where you're headed."
       />
     </main>
   );

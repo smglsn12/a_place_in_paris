@@ -1,12 +1,10 @@
 import {
-  FileCheck2,
-  Home,
-  Landmark,
-  HeartPulse,
-  GraduationCap,
-  Croissant,
   Compass,
+  Search,
+  Video,
+  FileCheck2,
   ShieldCheck,
+  KeyRound,
   Languages,
   HeartHandshake,
   type LucideIcon,
@@ -30,81 +28,81 @@ export type Service = {
 
 export const SERVICES: Service[] = [
   {
+    icon: Compass,
+    title: "Neighborhood Matching",
+    description:
+      "The right arrondissement changes everything. I start by finding where in Paris you'll actually feel at home.",
+    detail:
+      "Before we look at a single listing, we figure out where you belong. I learn how you want to live — quiet or buzzing, close to work, near green space, family-friendly — and translate that into the right arrondissements and pockets within them, with an honest read on what each costs.",
+    points: [
+      "Lifestyle & budget consultation",
+      "Arrondissement shortlist",
+      "Commute & daily-life mapping",
+    ],
+  },
+  {
+    icon: Search,
+    title: "Apartment Search",
+    description:
+      "I scour the French listing sites, agencies, and word-of-mouth leads so you're not refreshing SeLoger at 2am.",
+    detail:
+      "Paris apartments rarely sit on one tidy website, and the best ones move fast. I watch the French portals, work my agency contacts, and chase off-market leads — then send you a curated shortlist of places actually worth your time, not a firehose of listings.",
+    points: [
+      "Curated, vetted listings",
+      "French-site & agency search",
+      "Off-market & word-of-mouth leads",
+    ],
+  },
+  {
+    icon: Video,
+    title: "Viewings & Tours",
+    description:
+      "Can't be in Paris yet? I tour apartments in person and walk you through them on live video.",
+    detail:
+      "Most of my clients are still in the US when we start. I visit apartments on your behalf, walk you through them on a live video call, and give you the honest take an agent never will — the noisy street, the sixth-floor walk-up, the kitchen that's smaller than the photos suggest.",
+    points: [
+      "In-person visits on your behalf",
+      "Live video walkthroughs",
+      "Honest assessments & red flags",
+    ],
+  },
+  {
     icon: FileCheck2,
-    title: "Visas & Immigration",
+    title: "Application & Lease",
     description:
-      "Long-stay visitor, talent passport, or self-employed — we map the right path and prepare every form.",
+      "Paris rentals go to whoever has the strongest dossier ready first. I build yours and handle the French paperwork.",
     detail:
-      "France offers more than a dozen long-stay visa routes, and choosing the wrong one is the most common reason applications stall. We assess your work, income, and goals, recommend the right category, then assemble and translate a consulate-ready dossier — and coach you through the appointment itself.",
+      "A complete, correctly-formatted dossier de location is what wins apartments here — and it trips up almost every newcomer. I assemble and present yours so it stands out, review the lease with you in plain English, and support your offer and any negotiation.",
     points: [
-      "Visa strategy & eligibility review",
-      "Dossier preparation & translation",
-      "Consulate appointment coaching",
+      "Dossier de location prep",
+      "Lease review in plain English",
+      "Offer & negotiation support",
     ],
   },
   {
-    icon: Home,
-    title: "Home Search",
+    icon: ShieldCheck,
+    title: "Guarantor Solutions",
     description:
-      "Apartment hunting in a market that rewards locals. We negotiate, verify, and tour on your behalf.",
+      "No French income or guarantor yet? It's the number-one thing that blocks newcomers — and it's solvable.",
     detail:
-      "Paris rentals move fast and favor applicants who already understand the system. We translate your budget and lifestyle into the right arrondissements, screen listings, tour in person or on video, and handle the dossier de location — including guarantor solutions like Garantme for newcomers without French income history.",
+      "Landlords almost always ask for a French guarantor, which most arrivals don't have. I set you up with solutions like Garantme, point you toward newcomer-friendly landlords, and make sure a thin French credit history doesn't quietly sink an otherwise perfect application.",
     points: [
-      "Neighborhood matching to your life",
-      "Vetted listings & virtual tours",
-      "Lease review & guarantor solutions",
+      "Garantme & guarantor setup",
+      "Newcomer-friendly landlords",
+      "Deposit & insurance guidance",
     ],
   },
   {
-    icon: Landmark,
-    title: "Banking & Admin",
+    icon: KeyRound,
+    title: "Move-In Support",
     description:
-      "The paperwork that makes France work — opened, filed, and explained in plain English.",
+      "Keys in hand is the goal — but the first week matters too. I help you actually settle in.",
     detail:
-      "A French bank account, a numéro fiscal, and your residence permit unlock everything else — but each has its own quirks and queues. We open accounts with newcomer-friendly banks, register you with the tax and social-security systems, and manage your OFII validation so nothing falls through the cracks.",
+      "Signing the lease isn't quite the finish line. I help you through the move-in inventory (état des lieux) so you're not blamed for someone else's scuffs, get your utilities and internet switched on, and orient you to your new neighborhood so it feels like home from day one.",
     points: [
-      "French bank account & RIB setup",
-      "Social security & tax number (numéro fiscal)",
-      "OFII validation & residence permit",
-    ],
-  },
-  {
-    icon: HeartPulse,
-    title: "Healthcare",
-    description:
-      "Enroll in one of the world's best health systems and find English-speaking doctors near you.",
-    detail:
-      "Once you're a resident, France's Assurance Maladie covers the bulk of your healthcare — and a modest mutuelle tops up the rest. We handle your enrollment, help you choose the right top-up plan, and connect you with English-speaking GPs, specialists, and pharmacies in your neighborhood.",
-    points: [
-      "Assurance maladie enrollment",
-      "Private top-up (mutuelle) guidance",
-      "English-speaking physician network",
-    ],
-  },
-  {
-    icon: GraduationCap,
-    title: "Family & Schools",
-    description:
-      "Bilingual, international, or local public — we find the right fit and handle the enrollment.",
-    detail:
-      "Whether you want a bilingual école, an international school with an American track, or full immersion in the French public system, we match your children to the right schools, manage applications and waitlists, and coordinate the dependent visas so the whole family arrives together.",
-    points: [
-      "School search & application support",
-      "Spouse & dependent visa coordination",
-      "Childcare and crèche placement",
-    ],
-  },
-  {
-    icon: Croissant,
-    title: "Settling In",
-    description:
-      "The unglamorous, essential details — so week one feels like home, not a scavenger hunt.",
-    detail:
-      "The difference between surviving and settling is the small stuff: a working SIM, home internet, the métro and Vélib' apps, knowing your boulangerie. We set up your utilities and connectivity, orient you to daily life, and introduce you to tutors and a community of fellow expats so Paris feels like home from week one.",
-    points: [
-      "Phone, internet & utilities setup",
-      "Métro, Vélib' & daily-life orientation",
-      "French lessons & community intros",
+      "Utilities & internet setup",
+      "Move-in inventory (état des lieux)",
+      "Neighborhood orientation",
     ],
   },
 ];
@@ -120,25 +118,25 @@ export const PROCESS_STEPS: ProcessStep[] = [
     number: "01",
     title: "Discovery call",
     description:
-      "A free 30-minute conversation about your timeline, work situation, and what a good life in Paris looks like for you.",
+      "A free 30-minute chat about your budget, must-haves, timeline, and what a good life in Paris looks like for you.",
   },
   {
     number: "02",
-    title: "Your relocation plan",
+    title: "Your search plan",
     description:
-      "We build a personalized roadmap — visa route, budget, neighborhoods, and a week-by-week timeline to your move.",
+      "I narrow the neighborhoods, set a realistic budget, and start building a shortlist of apartments genuinely worth your time.",
   },
   {
     number: "03",
-    title: "We handle the heavy lifting",
+    title: "Viewings & applications",
     description:
-      "Paperwork, apartment tours, appointments, translations. You approve; we execute and keep everything on track.",
+      "I tour and vet apartments, flag the duds, and prepare your rental dossier so we can pounce the moment the right place appears.",
   },
   {
     number: "04",
-    title: "Arrival & beyond",
+    title: "Keys & move-in",
     description:
-      "We meet you in Paris, get you set up, and stay on call through your first season as a Parisian.",
+      "Lease signed, deposit sorted, keys in hand. I help you through the état des lieux and getting settled in your first week.",
   },
 ];
 
@@ -153,45 +151,45 @@ export type Package = {
 
 export const PACKAGES: Package[] = [
   {
-    name: "Compass",
-    tagline: "Guidance for the confident DIY mover",
-    price: "$1,900",
+    name: "Search Starter",
+    tagline: "Guidance for the confident DIY hunter",
+    price: "$390",
     cadence: "one-time",
     features: [
-      "Visa strategy session & checklist",
-      "Personalized relocation roadmap",
-      "Neighborhood & budget guide",
-      "Two 60-minute advisory calls",
-      "Email support for 60 days",
+      "Neighborhood & budget consultation",
+      "Personalized search strategy",
+      "Curated starter list of listings",
+      "Two 45-minute advisory calls",
+      "Email support for 30 days",
     ],
   },
   {
-    name: "Concierge",
-    tagline: "Our signature, end-to-end relocation",
-    price: "$6,500",
-    cadence: "full service",
+    name: "Full Search",
+    tagline: "My signature, end-to-end apartment hunt",
+    price: "$1,490",
+    cadence: "until you sign",
     featured: true,
     features: [
-      "Everything in Compass",
-      "Full visa dossier preparation",
-      "Home search & lease negotiation",
-      "Banking, healthcare & admin setup",
-      "Arrival day in-person support",
-      "90 days of priority support",
+      "Everything in Search Starter",
+      "Ongoing curated listing search",
+      "In-person viewings & video tours",
+      "Rental dossier preparation",
+      "Offer & lease negotiation",
+      "Support all the way through signing",
     ],
   },
   {
-    name: "Famille",
-    tagline: "For families and dual-career moves",
+    name: "Search & Settle",
+    tagline: "The full hunt plus a smooth landing",
     price: "Custom",
     cadence: "tailored",
     features: [
-      "Everything in Concierge",
-      "School search & enrollment",
-      "Spouse & dependent visa coordination",
-      "Childcare & pediatric setup",
-      "Dedicated relocation lead",
-      "6 months of priority support",
+      "Everything in Full Search",
+      "Guarantor & insurance setup",
+      "Utilities & internet coordination",
+      "Move-in (état des lieux) support",
+      "Neighborhood orientation",
+      "30 days of post-move support",
     ],
   },
 ];
@@ -205,21 +203,15 @@ export type Testimonial = {
 export const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "We'd been dreaming about Paris for a decade and kept stalling on the visa. They turned a wall of French bureaucracy into a checklist. We landed with an apartment, a bank account, and zero panic.",
+      "We were trying to rent from 5,000 miles away and getting nowhere — every listing wanted a French guarantor we didn't have. Jill found us a place in the 11th, built the dossier, and we signed before we'd even landed.",
     name: "Dana & Marcus R.",
-    detail: "Moved from Austin, TX · Talent Passport",
+    detail: "Found a 2-bedroom in the 11th · from Austin, TX",
   },
   {
     quote:
-      "As a remote worker I had no idea where to even start. My roadmap was ready in a week and every appointment was handled. I sipped my first coffee in the 11th feeling like I belonged.",
+      "I had no idea how the Paris rental market worked, and the scam stories scared me off doing it alone. Jill toured places on video, told me honestly which ones to skip, and got me a studio I love in the 3rd.",
     name: "Priya S.",
-    detail: "Moved from Seattle, WA · Long-stay visitor visa",
-  },
-  {
-    quote:
-      "Relocating with two kids felt impossible until we had a real team. Schools, healthcare, the lot — sorted. They even met us at the airport. Worth every cent.",
-    name: "The Coleman Family",
-    detail: "Moved from Chicago, IL · Famille package",
+    detail: "Found a studio in the 3rd · from Seattle, WA",
   },
 ];
 
@@ -230,29 +222,34 @@ export type Faq = {
 
 export const FAQS: Faq[] = [
   {
-    question: "Do I need to speak French to move to Paris?",
+    question: "Do I need to be in Paris to start the search?",
     answer:
-      "No — many of our clients arrive with little or no French. We handle the French-language paperwork and appointments for you, and connect you with tutors so you can build confidence at your own pace.",
+      "Not at all. Most of my clients are still in the US when we begin. I tour apartments in person and walk you through them over live video, so you can search Paris without leaving home.",
   },
   {
-    question: "How long does the whole process take?",
+    question: "How long does it take to find an apartment?",
     answer:
-      "Most relocations run three to six months from discovery call to arrival, depending on your visa type and how quickly consulate appointments open. We build your timeline around your target move date.",
+      "It depends on your budget and must-haves, but most searches run a few weeks once we start viewings. Paris moves fast — having your dossier ready in advance is what actually wins apartments.",
   },
   {
-    question: "Which visa is right for me?",
+    question: "I don't have a French guarantor or French income — can you still help?",
     answer:
-      "It depends on your work, income, and plans. Remote workers and retirees often use the long-stay visitor visa; entrepreneurs and skilled professionals may qualify for the Talent Passport. Your discovery call includes a personalized recommendation.",
+      "Yes, and it's the single most common worry I hear. We use solutions like Garantme and target newcomer-friendly landlords so a thin French credit history doesn't sink your application.",
   },
   {
-    question: "Can you help if I've already started the process?",
+    question: "Do you handle the lease and paperwork?",
     answer:
-      "Absolutely. Plenty of clients come to us mid-move — half-finished dossiers, a rejected application, or just stuck on the apartment search. We'll meet you where you are and pick up the thread.",
+      "I do. I prepare your dossier de location, review the lease with you in plain English, and support you through signing and the move-in inventory (état des lieux).",
   },
   {
-    question: "Are your fees in addition to government costs?",
+    question: "Do you help with visas or immigration?",
     answer:
-      "Yes. Our packages cover our advisory and concierge work. Government fees (visa, residence permit, OFII) and third-party costs like rent deposits are paid separately and we're fully transparent about them up front.",
+      "No — I focus exclusively on finding you the right apartment, which is a craft of its own. If you need visa help, I'm happy to point you toward trusted resources for that side of the move.",
+  },
+  {
+    question: "Are your fees on top of other costs?",
+    answer:
+      "Yes. My fee covers the apartment search and paperwork support. Third-party costs — your security deposit, any agency fees, renter's insurance — are separate, and I'm transparent about them up front.",
   },
 ];
 
@@ -267,31 +264,31 @@ export const VALUES: Value[] = [
     icon: Compass,
     title: "Clarity over chaos",
     description:
-      "French bureaucracy is famously opaque. Our job is to turn it into a clear, ordered checklist you actually understand.",
+      "The Paris rental market is opaque and fast. My job is to turn it into a clear shortlist and a calm, ordered plan you actually understand.",
   },
   {
     icon: ShieldCheck,
     title: "Honest by default",
     description:
-      "Flat pricing, transparent third-party costs, and straight answers — even when the honest answer is 'wait' or 'not yet'.",
+      "Straight answers about budgets, neighborhoods, and red flags — even when the honest answer is 'skip this one' or 'wait for something better.'",
   },
   {
     icon: Languages,
-    title: "We speak both worlds",
+    title: "I speak both worlds",
     description:
-      "American expectations meet French administration. We translate the language, the paperwork, and the unspoken rules.",
+      "American expectations meet the French rental system. I translate the listings, the paperwork, and the unspoken rules.",
   },
   {
     icon: HeartHandshake,
-    title: "Relationships, not transactions",
+    title: "One client at a time",
     description:
-      "Most of our clients come from referrals. We stay reachable long after you've unpacked the last box.",
+      "This is a personal service, not a volume business. You get my full attention, and I'm reachable long after you've got the keys.",
   },
 ];
 
 export const ABOUT_STATS = [
-  { value: "300+", label: "Families relocated" },
-  { value: "98%", label: "Visa approval rate" },
-  { value: "12 yrs", label: "On the ground in Paris" },
-  { value: "40+", label: "US states served" },
+  { value: "2", label: "Clients placed" },
+  { value: "100%", label: "Successfully housed" },
+  { value: "1.5 yrs", label: "Living in Paris" },
+  { value: "1:1", label: "Personal attention" },
 ];

@@ -1,4 +1,4 @@
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 export function Hero() {
   return (
@@ -20,23 +20,19 @@ export function Hero() {
       <div className="container-page grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="animate-fade-up">
           <span className="inline-flex items-center gap-2 rounded-full border border-ink/10 bg-cream-100/70 px-4 py-1.5 text-xs font-medium text-ink-soft">
-            <span className="flex items-center gap-0.5 text-gold">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} size={12} fill="currentColor" strokeWidth={0} />
-              ))}
-            </span>
-            Trusted by 300+ American families
+            <Sparkles size={13} className="text-gold" />
+            Boutique apartment finding in Paris
           </span>
 
           <h1 className="mt-6 font-serif text-4xl leading-[1.05] font-semibold text-balance sm:text-5xl md:text-6xl">
-            Your move to Paris,
-            <span className="block text-brand italic">beautifully handled.</span>
+            Your Paris apartment,
+            <span className="block text-brand italic">found for you.</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-mist text-pretty">
-            We&apos;re the boutique relocation team for US citizens making France
-            home. From the visa dossier to your first café au lait as a local —
-            we handle the bureaucracy so you can savor the arrival.
+            I&apos;m Jill — I help US citizens find the right apartment in Paris.
+            From narrowing down neighborhoods to signing the lease, I handle the
+            hunt so you can focus on the exciting part: your new life here.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -59,7 +55,7 @@ export function Hero() {
           </div>
 
           <p className="mt-6 text-sm text-mist">
-            No obligation · 30 minutes · Speak with a real relocation advisor
+            No obligation · 30 minutes · A real conversation with Jill
           </p>
         </div>
 
@@ -73,9 +69,9 @@ export function Hero() {
 
 function HeroCard() {
   const stats = [
-    { value: "300+", label: "Families relocated" },
-    { value: "98%", label: "Visa approval rate" },
-    { value: "12 yrs", label: "On the ground in Paris" },
+    { value: "2", label: "Clients placed" },
+    { value: "100%", label: "Found their home" },
+    { value: "1.5 yrs", label: "Living in Paris" },
   ];
 
   return (
