@@ -7,7 +7,7 @@ import { CtaBand } from "@/components/cta-band";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Meet Jill — the apartment finder behind A Place in Paris. A US immigrant with a business degree and real estate background, helping fellow Americans find their home in Paris.",
+    "Meet Jill, the apartment finder behind A Place in Paris. A US immigrant with a business degree and real estate background, helping fellow Americans find their home in Paris.",
 };
 
 export default function AboutPage() {
@@ -16,7 +16,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="Meet your Paris apartment finder"
-        description="A Place in Paris is a personal service — just me, helping fellow Americans find a home in the city I've come to love."
+        description="A Place in Paris is a personal service: just me, helping fellow Americans find a home in the city I've come to love."
       />
 
       {/* Bio + photo */}

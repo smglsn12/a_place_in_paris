@@ -19,7 +19,7 @@ export function Faq() {
 
         <div className="mt-12 grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <p className="max-w-sm text-base leading-relaxed text-mist">
-            Still wondering about your situation? Every search is different — the
+            Still wondering about your situation? Every search is different, so the
             quickest way to a real answer is a short call with me.
             <a href="#contact" className="mt-4 block font-semibold text-brand underline underline-offset-4">
               Ask us directly →

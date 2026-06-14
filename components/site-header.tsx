@@ -32,7 +32,7 @@ export function SiteHeader() {
       }`}
     >
       <div className="container-page flex h-18 items-center justify-between py-4">
-        <a href="/" className="z-50" aria-label="A Place in Paris — home">
+        <a href="/" className="z-50" aria-label="A Place in Paris, home">
           <Logo />
         </a>
 

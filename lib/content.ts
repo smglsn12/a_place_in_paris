@@ -33,7 +33,7 @@ export const SERVICES: Service[] = [
     description:
       "The right arrondissement changes everything. I start by finding where in Paris you'll actually feel at home.",
     detail:
-      "Before we look at a single listing, we figure out where you belong. I learn how you want to live — quiet or buzzing, close to work, near green space, family-friendly — and translate that into the right arrondissements and pockets within them, with an honest read on what each costs.",
+      "Before we look at a single listing, we figure out where you belong. I learn how you want to live (quiet or buzzing, close to work, near green space, family-friendly) and translate that into the right arrondissements and pockets within them, with an honest read on what each costs.",
     points: [
       "Lifestyle & budget consultation",
       "Arrondissement shortlist",
@@ -46,7 +46,7 @@ export const SERVICES: Service[] = [
     description:
       "I scour the French listing sites, agencies, and word-of-mouth leads so you're not refreshing SeLoger at 2am.",
     detail:
-      "Paris apartments rarely sit on one tidy website, and the best ones move fast. I watch the French portals, work my agency contacts, and chase off-market leads — then send you a curated shortlist of places actually worth your time, not a firehose of listings.",
+      "Paris apartments rarely sit on one tidy website, and the best ones move fast. I watch the French portals, work my agency contacts, and chase off-market leads, then send you a curated shortlist of places actually worth your time, not a firehose of listings.",
     points: [
       "Curated, vetted listings",
       "French-site & agency search",
@@ -59,7 +59,7 @@ export const SERVICES: Service[] = [
     description:
       "Can't be in Paris yet? I tour apartments in person and walk you through them on live video.",
     detail:
-      "Most of my clients are still in the US when we start. I visit apartments on your behalf, walk you through them on a live video call, and give you the honest take an agent never will — the noisy street, the sixth-floor walk-up, the kitchen that's smaller than the photos suggest.",
+      "Most of my clients are still in the US when we start. I visit apartments on your behalf, walk you through them on a live video call, and give you the honest take an agent never will: the noisy street, the sixth-floor walk-up, the kitchen that's smaller than the photos suggest.",
     points: [
       "In-person visits on your behalf",
       "Live video walkthroughs",
@@ -72,7 +72,7 @@ export const SERVICES: Service[] = [
     description:
       "Paris rentals go to whoever has the strongest dossier ready first. I build yours and handle the French paperwork.",
     detail:
-      "A complete, correctly-formatted dossier de location is what wins apartments here — and it trips up almost every newcomer. I assemble and present yours so it stands out, review the lease with you in plain English, and support your offer and any negotiation.",
+      "A complete, correctly-formatted dossier de location is what wins apartments here, and it trips up almost every newcomer. I assemble and present yours so it stands out, review the lease with you in plain English, and support your offer and any negotiation.",
     points: [
       "Dossier de location prep",
       "Lease review in plain English",
@@ -83,7 +83,7 @@ export const SERVICES: Service[] = [
     icon: ShieldCheck,
     title: "Guarantor Solutions",
     description:
-      "No French income or guarantor yet? It's the number-one thing that blocks newcomers — and it's solvable.",
+      "No French income or guarantor yet? It's the number-one thing that blocks newcomers, and it's solvable.",
     detail:
       "Landlords almost always ask for a French guarantor, which most arrivals don't have. I set you up with solutions like Garantme, point you toward newcomer-friendly landlords, and make sure a thin French credit history doesn't quietly sink an otherwise perfect application.",
     points: [
@@ -96,7 +96,7 @@ export const SERVICES: Service[] = [
     icon: KeyRound,
     title: "Move-In Support",
     description:
-      "Keys in hand is the goal — but the first week matters too. I help you actually settle in.",
+      "Keys in hand is the goal, but the first week matters too. I help you actually settle in.",
     detail:
       "Signing the lease isn't quite the finish line. I help you through the move-in inventory (état des lieux) so you're not blamed for someone else's scuffs, get your utilities and internet switched on, and orient you to your new neighborhood so it feels like home from day one.",
     points: [
@@ -215,10 +215,10 @@ export const FAQS: Faq[] = [
   {
     question: "How long does it take to find an apartment?",
     answer:
-      "It depends on your budget and must-haves, but most searches run a few weeks once we start viewings. Paris moves fast — having your dossier ready in advance is what actually wins apartments.",
+      "It depends on your budget and must-haves, but most searches run a few weeks once we start viewings. Paris moves fast; having your dossier ready in advance is what actually wins apartments.",
   },
   {
-    question: "I don't have a French guarantor or French income — can you still help?",
+    question: "I don't have a French guarantor or French income. Can you still help?",
     answer:
       "Yes, and it's the single most common worry I hear. We use solutions like Garantme and target newcomer-friendly landlords so a thin French credit history doesn't sink your application.",
   },
@@ -230,12 +230,12 @@ export const FAQS: Faq[] = [
   {
     question: "Do you help with visas or immigration?",
     answer:
-      "No — I focus exclusively on finding you the right apartment, which is a craft of its own. If you need visa help, I'm happy to point you toward trusted resources for that side of the move.",
+      "No, I focus exclusively on finding you the right apartment, which is a craft of its own. If you need visa help, I'm happy to point you toward trusted resources for that side of the move.",
   },
   {
     question: "Are your fees on top of other costs?",
     answer:
-      "Yes. My fee covers the apartment search and paperwork support. Third-party costs — your security deposit, any agency fees, renter's insurance — are separate, and I'm transparent about them up front.",
+      "Yes. My fee covers the apartment search and paperwork support. Third-party costs (your security deposit, any agency fees, renter's insurance) are separate, and I'm transparent about them up front.",
   },
 ];
 
@@ -256,7 +256,7 @@ export const VALUES: Value[] = [
     icon: ShieldCheck,
     title: "Honest by default",
     description:
-      "Straight answers about budgets, neighborhoods, and red flags — even when the honest answer is 'skip this one' or 'wait for something better.'",
+      "Straight answers about budgets, neighborhoods, and red flags, even when the honest answer is 'skip this one' or 'wait for something better.'",
   },
   {
     icon: Languages,

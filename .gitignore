@@ -10,5 +10,5 @@ next-env.d.ts
 .vercel
 *.tsbuildinfo
 
-# Private business documents — keep out of the repo
+# Private business documents (keep out of the repo)
 *.pdf

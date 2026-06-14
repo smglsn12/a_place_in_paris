@@ -10,7 +10,7 @@ export function SiteFooter() {
             <Logo inverted />
             <p className="mt-4 text-sm leading-relaxed text-cream/60">
               A boutique apartment-finding service helping US citizens find the
-              right home in Paris — personally, one client at a time.
+              right home in Paris, personally, one client at a time.
             </p>
           </div>
 

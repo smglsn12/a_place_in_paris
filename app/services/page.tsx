@@ -8,7 +8,7 @@ import { CtaBand } from "@/components/cta-band";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "How I find your Paris apartment — neighborhood matching, listing search, in-person viewings, rental dossier and lease support, guarantor solutions, and move-in help.",
+    "How I find your Paris apartment: neighborhood matching, listing search, in-person viewings, rental dossier and lease support, guarantor solutions, and move-in help.",
 };
 
 export default function ServicesPage() {
@@ -59,7 +59,7 @@ export default function ServicesPage() {
       <Packages />
       <CtaBand
         title="Not sure which package you need?"
-        description="That's what the discovery call is for. I'll listen to your situation and recommend exactly the help that fits — nothing more."
+        description="That's what the discovery call is for. I'll listen to your situation and recommend exactly the help that fits, nothing more."
       />
     </main>
   );

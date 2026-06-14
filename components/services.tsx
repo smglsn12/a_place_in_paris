@@ -9,7 +9,7 @@ export function Services() {
         <SectionHeading
           eyebrow="How I help"
           title="Everything between the listing and the lease"
-          description="Pick the help you need, or hand me the whole search — from the first shortlist to the keys in your hand."
+          description="Pick the help you need, or hand me the whole search: from the first shortlist to the keys in your hand."
         />
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

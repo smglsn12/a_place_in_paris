@@ -30,7 +30,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-mist text-pretty">
-            I&apos;m Jill — I help US citizens find the right apartment in Paris.
+            I&apos;m Jill. I help US citizens find the right apartment in Paris.
             From narrowing down neighborhoods to signing the lease, I handle the
             hunt so you can focus on the exciting part: your new life here.
           </p>

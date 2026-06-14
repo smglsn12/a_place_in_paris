@@ -40,7 +40,7 @@ export async function POST(request: Request) {
   // settings) real emails will be delivered to your inbox.
   if (!accessKey) {
     console.warn(
-      "[contact] WEB3FORMS_ACCESS_KEY is not set — logging submission instead of sending.",
+      "[contact] WEB3FORMS_ACCESS_KEY is not set; logging submission instead of sending.",
       { name, email, timeline, message },
     );
     return NextResponse.json({ ok: true, delivered: false });
@@ -48,7 +48,7 @@ export async function POST(request: Request) {
 
   // ── Web3Forms (default) ────────────────────────────────────────────────────
   // Free tier, no domain verification needed. Get a key at https://web3forms.com
-  // — it's tied to the inbox you want submissions delivered to.
+  // The key is tied to the inbox you want submissions delivered to.
   try {
     const res = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -56,7 +56,7 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         access_key: accessKey,
         subject: `New discovery-call request from ${name}`,
-        from_name: "A Place in Paris — Website",
+        from_name: "A Place in Paris (Website)",
         name,
         email,
         timeline,
@@ -99,5 +99,5 @@ export async function POST(request: Request) {
  *      text: `Name: ${name}\nEmail: ${email}\nTimeline: ${timeline}\n\n${message}`,
  *    });
  *
- * Formspree works similarly — POST the fields to your form's endpoint URL.
+ * Formspree works similarly: POST the fields to your form's endpoint URL.
  */

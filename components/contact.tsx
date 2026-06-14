@@ -58,7 +58,7 @@ export function Contact() {
               </h2>
               <p className="mt-4 max-w-sm leading-relaxed text-cream/70">
                 Tell me a little about your plans. I&apos;ll reply within one
-                business day with next steps and a time to talk — no obligation.
+                business day with next steps and a time to talk, with no obligation.
               </p>
             </div>
 
@@ -78,7 +78,7 @@ export function Contact() {
               <div className="flex h-full flex-col items-center justify-center text-center">
                 <CheckCircle2 size={48} className="text-gold" />
                 <h3 className="mt-5 font-serif text-2xl font-semibold text-ink">
-                  Merci — we&apos;ve got it.
+                  Merci, we&apos;ve got it.
                 </h3>
                 <p className="mt-3 max-w-sm text-mist">
                   Your message is on its way to me. Expect a reply within one

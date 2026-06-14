@@ -6,20 +6,20 @@ service** that helps US citizens find a home in Paris. Built with **Next.js
 
 ## Stack
 
-- **Next.js 15** (App Router, React 19) — statically prerendered single-page site
-- **Tailwind CSS v4** — design tokens defined in `app/globals.css` via `@theme`
-- **Lucide React** — iconography
-- **TypeScript** — strict mode
+- **Next.js 15** (App Router, React 19): statically prerendered single-page site
+- **Tailwind CSS v4**: design tokens defined in `app/globals.css` via `@theme`
+- **Lucide React**: iconography
+- **TypeScript**: strict mode
 - Google Fonts via `next/font`: Playfair Display (serif display) + Inter (sans body)
 
 ## Design system
 
 Defined as Tailwind theme tokens in `app/globals.css`:
 
-- **Palette** — Parisian midnight blue (`ink`/`brand`), warm ivory (`cream`),
+- **Palette**: Parisian midnight blue (`ink`/`brand`), warm ivory (`cream`),
   brass-gold accent (`gold`), with `mist` for muted text.
-- **Type** — editorial serif headings paired with a clean sans body.
-- **Motion** — a subtle `fade-up` entrance animation.
+- **Type**: editorial serif headings paired with a clean sans body.
+- **Motion**: a subtle `fade-up` entrance animation.
 
 ## Getting started
 
@@ -32,16 +32,16 @@ npm start        # serve the production build
 
 ## Routes
 
-- `/` — home (hero, services overview, process, packages, testimonials, FAQ, contact form)
-- `/services` — detailed breakdown of each relocation service + pricing
-- `/about` — story, values, and stats
-- `/api/contact` — POST endpoint (Route Handler) that delivers the contact form
+- `/`: home (hero, services overview, process, packages, testimonials, FAQ, contact form)
+- `/services`: detailed breakdown of each relocation service + pricing
+- `/about`: story, values, and stats
+- `/api/contact`: POST endpoint (Route Handler) that delivers the contact form
 
 ## Structure
 
 ```
 app/
-  layout.tsx          Root layout — fonts, SEO, shared header + footer
+  layout.tsx          Root layout: fonts, SEO, shared header + footer
   page.tsx            Home page sections
   services/page.tsx   Detailed services route
   about/page.tsx      About route
@@ -84,7 +84,7 @@ cp .env.example .env.local   # then paste your WEB3FORMS_ACCESS_KEY
 
 ## Deploy to Vercel
 
-This is a standard Next.js App Router app — zero config on Vercel.
+This is a standard Next.js App Router app: zero config on Vercel.
 
 1. Push the repo to GitHub/GitLab/Bitbucket.
 2. In [vercel.com](https://vercel.com) → **Add New → Project**, import the repo.
@@ -102,7 +102,7 @@ vercel --prod   # production deploy
 
 ## Notes
 
-- Site copy lives in `lib/content.ts` — edit there to update services, pricing,
+- Site copy lives in `lib/content.ts`: edit there to update services, pricing,
   testimonials, FAQs, and values without touching markup.
-- All content (names, stats, address, phone) is placeholder — replace with the
+- All content (names, stats, address, phone) is placeholder: replace with the
   real business details before launch.

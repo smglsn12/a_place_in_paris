@@ -9,7 +9,7 @@ export function Packages() {
         <SectionHeading
           eyebrow="Packages"
           title="Choose how much you'd like me to handle"
-          description="Three ways to work together. Tell me what you need and I'll send a quote — third-party costs like deposits and agency fees are always separate and never marked up."
+          description="Three ways to work together. Tell me what you need and I'll send a quote. Third-party costs like deposits and agency fees are always separate and never marked up."
         />
 
         <div className="mt-14 grid items-start gap-6 lg:grid-cols-3">

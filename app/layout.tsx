@@ -19,11 +19,11 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://aplaceinparis.com"),
   title: {
-    default: "A Place in Paris — Apartment Finding for Americans",
+    default: "A Place in Paris: Apartment Finding for Americans",
     template: "%s · A Place in Paris",
   },
   description:
-    "A boutique apartment-finding service helping US citizens find the right home in Paris — neighborhood matching, listing search, viewings, and the French rental paperwork, handled personally.",
+    "A boutique apartment-finding service helping US citizens find the right home in Paris: neighborhood matching, listing search, viewings, and the French rental paperwork, handled personally.",
   keywords: [
     "find apartment Paris",
     "Paris apartment search",
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     "rent apartment Paris US citizen",
   ],
   openGraph: {
-    title: "A Place in Paris — Apartment Finding for Americans",
+    title: "A Place in Paris: Apartment Finding for Americans",
     description:
-      "I help US citizens find the right apartment in Paris — from narrowing neighborhoods to signing the lease, the hunt handled for you.",
+      "I help US citizens find the right apartment in Paris: from narrowing neighborhoods to signing the lease, the hunt handled for you.",
     type: "website",
     locale: "en_US",
   },
