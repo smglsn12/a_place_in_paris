@@ -203,15 +203,9 @@ export type Testimonial = {
 export const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "We were trying to rent from 5,000 miles away and getting nowhere — every listing wanted a French guarantor we didn't have. Jill found us a place in the 11th, built the dossier, and we signed before we'd even landed.",
-    name: "Dana & Marcus R.",
-    detail: "Found a 2-bedroom in the 11th · from Austin, TX",
-  },
-  {
-    quote:
-      "I had no idea how the Paris rental market worked, and the scam stories scared me off doing it alone. Jill toured places on video, told me honestly which ones to skip, and got me a studio I love in the 3rd.",
-    name: "Priya S.",
-    detail: "Found a studio in the 3rd · from Seattle, WA",
+      "Jill is truly the best. She found one of the best apartments in Paris (imho) within my budget and in an amazing location! All I had to do was quickly discuss with her what I was looking for and my constraints and she took care of the rest. 100% recommend!!",
+    name: "Samuel Gleason",
+    detail: "Former client",
   },
 ];
 
