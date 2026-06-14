@@ -35,7 +35,6 @@ npm start        # serve the production build
 - `/`: home (hero, services overview, process, packages, testimonials, FAQ, contact form)
 - `/services`: detailed breakdown of each apartment-finding service, plus the packages
 - `/about`: Jill's bio and photo, values, and stats
-- `/api/contact`: POST endpoint (Route Handler) that delivers the contact form
 
 ## Structure
 
@@ -45,7 +44,6 @@ app/
   page.tsx            Home page sections
   services/page.tsx   Detailed services route
   about/page.tsx      About route
-  api/contact/route.ts  Contact form Route Handler
   globals.css         Tailwind import + @theme design tokens
 components/
   site-header.tsx     Sticky, scroll-aware nav with mobile menu
@@ -55,7 +53,7 @@ components/
   packages.tsx        Three service packages (quote-based)
   testimonials.tsx    Client quotes
   faq.tsx             Accordion (client component)
-  contact.tsx         Discovery-call form (posts to /api/contact)
+  contact.tsx         Discovery-call form (submits to Web3Forms)
   cta-band.tsx        Reusable call-to-action band for sub-pages
   page-hero.tsx       Reusable title band for sub-pages
   site-footer.tsx     Footer
@@ -67,20 +65,19 @@ lib/
 
 ## Contact form
 
-The form posts JSON to `/api/contact` (`app/api/contact/route.ts`), which validates
-the input and forwards it to an email provider.
+The form (`components/contact.tsx`) submits **directly from the visitor's browser**
+to [Web3Forms](https://web3forms.com), which emails each submission to
+**jillfindsyourparisapt@gmail.com**.
 
-- **Default provider: Web3Forms** (free, no domain verification). Get an access key
-  at [web3forms.com](https://web3forms.com) tied to your inbox, then set
-  `WEB3FORMS_ACCESS_KEY` (see `.env.example`).
-- **Demo mode:** until the key is set, submissions are validated and logged to the
-  server console (the form still shows its success state) so nothing breaks locally.
-- **Switching to Resend or Formspree:** the handler has a commented block at the
-  bottom showing the swap.
-
-```bash
-cp .env.example .env.local   # then paste your WEB3FORMS_ACCESS_KEY
-```
+- The Web3Forms **access key is public by design** and lives in `contact.tsx`
+  (`WEB3FORMS_ACCESS_KEY`). To change the destination inbox or rotate the key,
+  create a new one at [web3forms.com](https://web3forms.com) and replace it there.
+- Submitting client-side (rather than through a server route) is the standard
+  Web3Forms pattern, and it avoids Cloudflare blocking server-to-server calls from
+  datacenter IPs.
+- A hidden honeypot field filters basic spam bots.
+- If a submission fails, the form shows an error pointing visitors to email Jill
+  directly.
 
 ## Deploy to Vercel
 
@@ -89,8 +86,10 @@ This is a standard Next.js App Router app: zero config on Vercel.
 1. Push the repo to GitHub/GitLab/Bitbucket.
 2. In [vercel.com](https://vercel.com) → **Add New → Project**, import the repo.
    Vercel auto-detects Next.js (build `next build`, output handled automatically).
-3. Under **Environment Variables**, add `WEB3FORMS_ACCESS_KEY` with your key.
-4. **Deploy.** Add your custom domain under Project → Settings → Domains.
+3. **Deploy.** Add your custom domain under Project → Settings → Domains.
+
+No environment variables are required: the contact form's Web3Forms key lives in
+the client code.
 
 Or from the CLI:
 

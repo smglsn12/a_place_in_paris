@@ -3,6 +3,11 @@
 import { useState } from "react";
 import { AlertCircle, ArrowRight, CheckCircle2, Loader2, Mail } from "lucide-react";
 
+// Public Web3Forms access key. Submissions are delivered straight to
+// jillfindsyourparisapt@gmail.com. This key is meant to live in client code
+// (that's how Web3Forms works); rotate or replace it anytime at web3forms.com.
+const WEB3FORMS_ACCESS_KEY = "2ba653c6-d321-4336-a951-753ff48ed0f3";
+
 const TIMELINES = [
   "Just exploring",
   "Within 3 months",
@@ -25,18 +30,25 @@ export function Contact() {
     const data = Object.fromEntries(new FormData(form));
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New discovery-call request from ${data.name || "the website"}`,
+          from_name: "A Place in Paris (Website)",
+          ...data,
+        }),
       });
-      const json = (await res.json()) as { ok: boolean; error?: string };
-      if (!res.ok || !json.ok) {
-        throw new Error(json.error ?? "Something went wrong. Please try again.");
+      const json = (await res.json()) as { success?: boolean; message?: string };
+      if (!res.ok || !json.success) {
+        throw new Error(json.message ?? "Something went wrong.");
       }
       setSubmitted(true);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } catch {
+      setError(
+        "We couldn't send your message. Please try again, or email jillfindsyourparisapt@gmail.com directly.",
+      );
     } finally {
       setSubmitting(false);
     }
@@ -87,6 +99,15 @@ export function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                {/* Honeypot: hidden from people, catches spam bots */}
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="hidden"
+                />
                 <div className="grid gap-5 sm:grid-cols-2">
                   <Field label="Full name" htmlFor="name">
                     <input
