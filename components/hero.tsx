@@ -50,7 +50,7 @@ export function Hero() {
               href="#services"
               className="inline-flex items-center justify-center rounded-full border border-ink/15 px-7 py-3.5 text-base font-semibold text-ink transition-colors hover:bg-cream-100"
             >
-              Explore our services
+              Explore my services
             </a>
           </div>
 
