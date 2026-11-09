@@ -162,7 +162,7 @@ function ParisDusk() {
           {/* first platform */}
           <rect x="171" y="164" width="58" height="5" />
           {/* legs and arch */}
-          <path d="M173 169 H227 Q232 186 238 202 H222 Q215 181 200 179 Q185 181 178 202 H162 Q168 186 173 169 Z" />
+          <path d="M173 169 H227 Q232 186 238 202 H222 Q217 173 200 171.5 Q183 173 178 202 H162 Q168 186 173 169 Z" />
         </g>
       </defs>
 
