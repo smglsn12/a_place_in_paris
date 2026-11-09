@@ -1,10 +1,11 @@
 import {
   Compass,
-  Search,
+  Laptop,
   Video,
   FileCheck2,
   ShieldCheck,
-  KeyRound,
+  Wifi,
+  Sofa,
   Languages,
   HeartHandshake,
   type LucideIcon,
@@ -29,79 +30,79 @@ export type Service = {
 export const SERVICES: Service[] = [
   {
     icon: Compass,
-    title: "Neighborhood Matching",
+    title: "Neighborhood Guidance",
     description:
-      "The right arrondissement changes everything. I start by finding where in Paris you'll actually feel at home.",
+      "The right arrondissement changes everything. I help you figure out where in Paris you'll actually feel at home.",
     detail:
-      "Before we look at a single listing, we figure out where you belong. I learn how you want to live (quiet or buzzing, close to work, near green space, family-friendly) and translate that into the right arrondissements and pockets within them, with an honest read on what each costs.",
+      "Before you look at a single listing, it pays to know where you belong. I learn how you want to live (quiet or buzzing, close to work, near green space, family-friendly) and help you translate that into the arrondissements worth focusing on, with an honest read on what each costs.",
     points: [
       "Lifestyle & budget consultation",
-      "Arrondissement shortlist",
+      "Arrondissements to focus on",
       "Commute & daily-life mapping",
     ],
   },
   {
-    icon: Search,
-    title: "Apartment Search",
+    icon: FileCheck2,
+    title: "Rental Dossier & Guarantor",
     description:
-      "I scour the French listing sites, agencies, and word-of-mouth leads so you're not refreshing SeLoger at 2am.",
+      "Paris rentals go to whoever has the strongest dossier ready first. I help you build yours before you start searching.",
     detail:
-      "Paris apartments rarely sit on one tidy website, and the best ones move fast. I watch the French portals, work my agency contacts, and chase off-market leads, then send you a curated shortlist of places actually worth your time, not a firehose of listings.",
+      "A complete, correctly formatted dossier de location is what landlords expect here, and it trips up almost every newcomer. I help you gather and present every document so yours stands out. No French guarantor or French income? I help you set up a guarantor service like Garantme so a thin French credit history doesn't hold you back.",
     points: [
-      "Curated, vetted listings",
-      "French-site & agency search",
-      "Off-market & word-of-mouth leads",
+      "Dossier de location preparation",
+      "Guarantor service setup (e.g. Garantme)",
+      "Renter's insurance guidance",
+    ],
+  },
+  {
+    icon: Laptop,
+    title: "Apartment Search Coaching",
+    description:
+      "French apartment sites can be confusing. I show you where to look and how to use each site like a local.",
+    detail:
+      "Paris apartments are spread across many French websites, each with its own quirks. I point you to the right ones for your budget and situation, help you set up your profiles, and walk you through how to search, save alerts, and send inquiries yourself, so you can move quickly when the right place appears.",
+    points: [
+      "The right sites for your search",
+      "Profile setup, side by side",
+      "How to search & send inquiries",
     ],
   },
   {
     icon: Video,
-    title: "Viewings & Tours",
+    title: "Apartment Tours",
     description:
-      "Can't be in Paris yet? I tour apartments in person and walk you through them on live video.",
+      "Found a place you love but can't be in Paris yet? I can tour it for you, or go with you.",
     detail:
-      "Most of my clients are still in the US when we start. I visit apartments on your behalf, walk you through them on a live video call, and give you the honest take an agent never will: the noisy street, the sixth-floor walk-up, the kitchen that's smaller than the photos suggest.",
+      "Once you've found apartments you're interested in and sent your inquiries, I attend the viewings, either alongside you or on your behalf with a live video walkthrough. You get the honest take: the noisy street, the sixth-floor walk-up, the kitchen that's smaller than the photos suggest.",
     points: [
-      "In-person visits on your behalf",
+      "Tours with you or for you",
       "Live video walkthroughs",
-      "Honest assessments & red flags",
+      "Honest feedback & red flags",
     ],
   },
   {
-    icon: FileCheck2,
-    title: "Application & Lease",
+    icon: Wifi,
+    title: "Utilities, Wi-Fi & Phone",
     description:
-      "Paris rentals go to whoever has the strongest dossier ready first. I build yours and handle the French paperwork.",
+      "Lights on, wi-fi working, French phone number ready. I help you get connected without the headache.",
     detail:
-      "A complete, correctly-formatted dossier de location is what wins apartments here, and it trips up almost every newcomer. I assemble and present yours so it stands out, review the lease with you in plain English, and support your offer and any negotiation.",
+      "Setting up services in France means French-language forms, unfamiliar providers, and plenty of waiting. I help you choose and set up electricity and gas, home internet and wi-fi, and a French mobile phone plan, so your new place is ready to live in from day one.",
     points: [
-      "Dossier de location prep",
-      "Lease review in plain English",
-      "Offer & negotiation support",
+      "Electricity & gas setup",
+      "Internet & wi-fi setup",
+      "French mobile phone plan",
     ],
   },
   {
-    icon: ShieldCheck,
-    title: "Guarantor Solutions",
+    icon: Sofa,
+    title: "Decorating & Settling In",
     description:
-      "No French income or guarantor yet? It's the number-one thing that blocks newcomers, and it's solvable.",
+      "An empty apartment isn't a home yet. I can help you furnish and decorate so it truly feels like yours.",
     detail:
-      "Landlords almost always ask for a French guarantor, which most arrivals don't have. I set you up with solutions like Garantme, point you toward newcomer-friendly landlords, and make sure a thin French credit history doesn't quietly sink an otherwise perfect application.",
+      "From finding the right furniture shops and flea markets to pulling a look together, I help you turn a bare Paris apartment into a place you love coming home to, and show you around your new neighborhood along the way.",
     points: [
-      "Garantme & guarantor setup",
-      "Newcomer-friendly landlords",
-      "Deposit & insurance guidance",
-    ],
-  },
-  {
-    icon: KeyRound,
-    title: "Move-In Support",
-    description:
-      "Keys in hand is the goal, but the first week matters too. I help you actually settle in.",
-    detail:
-      "Signing the lease isn't quite the finish line. I help you through the move-in inventory (état des lieux) so you're not blamed for someone else's scuffs, get your utilities and internet switched on, and orient you to your new neighborhood so it feels like home from day one.",
-    points: [
-      "Utilities & internet setup",
-      "Move-in inventory (état des lieux)",
+      "Furnishing & decorating help",
+      "Favorite shops & flea markets",
       "Neighborhood orientation",
     ],
   },
@@ -122,21 +123,21 @@ export const PROCESS_STEPS: ProcessStep[] = [
   },
   {
     number: "02",
-    title: "Your search plan",
+    title: "Get search-ready",
     description:
-      "I narrow the neighborhoods, set a realistic budget, and start building a shortlist of apartments genuinely worth your time.",
+      "I help you build your rental dossier, point you to the right apartment sites, and set up your profiles with you.",
   },
   {
     number: "03",
-    title: "Viewings & applications",
+    title: "You search, I tour",
     description:
-      "I tour and vet apartments, flag the duds, and prepare your rental dossier so we can pounce the moment the right place appears.",
+      "You choose the apartments you love and send your inquiries. I go to the viewings with you, or for you on live video.",
   },
   {
     number: "04",
-    title: "Keys & move-in",
+    title: "Settle in",
     description:
-      "Lease signed, deposit sorted, keys in hand. I help you through the état des lieux and getting settled in your first week.",
+      "Once you have your keys, I help set up your utilities, wi-fi, and phone, and can even help you decorate.",
   },
 ];
 
@@ -149,39 +150,39 @@ export type Package = {
 
 export const PACKAGES: Package[] = [
   {
-    name: "Search Starter",
-    tagline: "Guidance for the confident DIY hunter",
+    name: "Search Ready",
+    tagline: "Everything you need to search confidently on your own",
     features: [
       "Neighborhood & budget consultation",
-      "Personalized search strategy",
-      "Curated starter list of listings",
-      "Two 45-minute advisory calls",
+      "Rental dossier preparation",
+      "Guarantor service setup",
+      "The right apartment sites for you",
+      "Profile setup & site walkthroughs",
       "Email support for 30 days",
     ],
   },
   {
-    name: "Full Search",
-    tagline: "My signature, end-to-end apartment hunt",
+    name: "Search Companion",
+    tagline: "My signature support, from dossier to viewings",
     featured: true,
     features: [
-      "Everything in Search Starter",
-      "Ongoing curated listing search",
-      "In-person viewings & video tours",
-      "Rental dossier preparation",
-      "Offer & lease negotiation",
-      "Support all the way through signing",
+      "Everything in Search Ready",
+      "Ongoing coaching while you search",
+      "Apartment tours, with you or for you",
+      "Live video walkthroughs",
+      "Honest feedback after every viewing",
     ],
   },
   {
-    name: "Search & Settle",
-    tagline: "The full hunt plus a smooth landing",
+    name: "Relocate & Settle",
+    tagline: "Full support, all the way to feeling at home",
     features: [
-      "Everything in Full Search",
-      "Guarantor & insurance setup",
-      "Utilities & internet coordination",
-      "Move-in (état des lieux) support",
+      "Everything in Search Companion",
+      "Electricity & gas setup",
+      "Internet & wi-fi setup",
+      "French mobile phone plan",
+      "Decorating & furnishing help",
       "Neighborhood orientation",
-      "30 days of post-move support",
     ],
   },
 ];
@@ -208,34 +209,39 @@ export type Faq = {
 
 export const FAQS: Faq[] = [
   {
-    question: "Do I need to be in Paris to start the search?",
+    question: "Do you find apartments for me?",
     answer:
-      "Not at all. Most of my clients are still in the US when we begin. I tour apartments in person and walk you through them over live video, so you can search Paris without leaving home.",
+      "No. In France, searching for apartments on someone's behalf is reserved for licensed real estate agents, and I'm not one. Instead, I make sure you're ready to land the apartment you find: a strong dossier, the right sites, your profiles set up, and me at the viewings with you or for you.",
   },
   {
-    question: "How long does it take to find an apartment?",
+    question: "Do I need to be in Paris to start?",
     answer:
-      "It depends on your budget and must-haves, but most searches run a few weeks once we start viewings. Paris moves fast; having your dossier ready in advance is what actually wins apartments.",
+      "Not at all. Most of my clients are still in the US when we begin. We build your dossier and set up your apartment-site profiles remotely, and once you've found places you like, I can tour them for you over live video.",
+  },
+  {
+    question: "How long does an apartment search usually take?",
+    answer:
+      "It depends on your budget and must-haves, but searches often take a few weeks once viewings begin. Paris moves fast; having your dossier ready before you start is what makes the difference.",
   },
   {
     question: "I don't have a French guarantor or French income. Can you still help?",
     answer:
-      "Yes, and it's the single most common worry I hear. We use solutions like Garantme and target newcomer-friendly landlords so a thin French credit history doesn't sink your application.",
+      "Yes, and it's the single most common worry I hear. I help you set up a guarantor service like Garantme so a thin French credit history doesn't sink your application.",
   },
   {
-    question: "Do you handle the lease and paperwork?",
+    question: "What help do you offer once I've signed a lease?",
     answer:
-      "I do. I prepare your dossier de location, review the lease with you in plain English, and support you through signing and the move-in inventory (état des lieux).",
+      "Plenty. I help you set up electricity and gas, home internet and wi-fi, and a French phone plan, and I can help you furnish and decorate so your apartment feels like home.",
   },
   {
     question: "Do you help with visas or immigration?",
     answer:
-      "No, I focus exclusively on finding you the right apartment, which is a craft of its own. If you need visa help, I'm happy to point you toward trusted resources for that side of the move.",
+      "No, I focus on helping you get set up in Paris. If you need visa help, I'm happy to point you toward trusted resources for that side of the move.",
   },
   {
     question: "Are your fees on top of other costs?",
     answer:
-      "Yes. My fee covers the apartment search and paperwork support. Third-party costs (your security deposit, any agency fees, renter's insurance) are separate, and I'm transparent about them up front.",
+      "Yes. My fee covers my coaching, tours, and setup help. Third-party costs (your security deposit, any agency fees, guarantor service fees, renter's insurance) are separate, and I'm transparent about them up front.",
   },
 ];
 
@@ -250,7 +256,7 @@ export const VALUES: Value[] = [
     icon: Compass,
     title: "Clarity over chaos",
     description:
-      "The Paris rental market is opaque and fast. My job is to turn it into a clear shortlist and a calm, ordered plan you actually understand.",
+      "The Paris rental market is opaque and fast. My job is to turn it into a calm, ordered plan you actually understand.",
   },
   {
     icon: ShieldCheck,
@@ -262,7 +268,7 @@ export const VALUES: Value[] = [
     icon: Languages,
     title: "I speak both worlds",
     description:
-      "American expectations meet the French rental system. I translate the listings, the paperwork, and the unspoken rules.",
+      "American expectations meet the French system. I translate the websites, the paperwork, and the unspoken rules.",
   },
   {
     icon: HeartHandshake,
@@ -273,8 +279,8 @@ export const VALUES: Value[] = [
 ];
 
 export const ABOUT_STATS = [
-  { value: "2", label: "Clients placed" },
-  { value: "100%", label: "Successfully housed" },
+  { value: "2", label: "Clients helped" },
+  { value: "100%", label: "Settled in" },
   { value: "1.5 yrs", label: "Living in Paris" },
   { value: "1:1", label: "Personal attention" },
 ];

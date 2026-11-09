@@ -8,8 +8,8 @@ export function Services() {
       <div className="container-page">
         <SectionHeading
           eyebrow="How I help"
-          title="Everything between the listing and the lease"
-          description="Pick the help you need, or hand me the whole search: from the first shortlist to the keys in your hand."
+          title="Everything between arriving and feeling at home"
+          description="Pick the help you need, or bring me in for your whole move: from your first dossier to your first evening at home."
         />
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -44,7 +44,7 @@ export function Services() {
             href="/services"
             className="group inline-flex items-center gap-2 text-sm font-semibold text-brand transition-colors hover:text-ink"
           >
-            See exactly how each part of the search works
+            See exactly how each service works
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </a>
         </div>

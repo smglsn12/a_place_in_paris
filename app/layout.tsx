@@ -19,22 +19,22 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://aplaceinparis.com"),
   title: {
-    default: "A Place in Paris: Apartment Finding for Americans",
+    default: "A Place in Paris: Relocation Assistance for Americans",
     template: "%s · A Place in Paris",
   },
   description:
-    "A boutique apartment-finding service helping US citizens find the right home in Paris: neighborhood matching, listing search, viewings, and the French rental paperwork, handled personally.",
+    "A boutique relocation service helping US citizens settle into Paris: rental dossier prep, apartment-search coaching, apartment tours, utilities and phone setup, and decorating, all handled personally.",
   keywords: [
-    "find apartment Paris",
-    "Paris apartment search",
-    "American expat Paris apartment",
-    "Paris apartment finder for foreigners",
-    "rent apartment Paris US citizen",
+    "relocation assistance Paris",
+    "move to Paris from the US",
+    "American expat Paris relocation",
+    "Paris rental dossier help",
+    "Paris relocation services for Americans",
   ],
   openGraph: {
-    title: "A Place in Paris: Apartment Finding for Americans",
+    title: "A Place in Paris: Relocation Assistance for Americans",
     description:
-      "I help US citizens find the right apartment in Paris: from narrowing neighborhoods to signing the lease, the hunt handled for you.",
+      "I help US citizens settle into life in Paris: from your rental dossier and apartment search coaching to tours, utilities, and decorating.",
     type: "website",
     locale: "en_US",
   },

@@ -1,7 +1,7 @@
 # A Place in Paris
 
-A modern, responsive marketing site for Jill's boutique **apartment-finding
-service** that helps US citizens find a home in Paris. Built with **Next.js
+A modern, responsive marketing site for Jill's boutique **relocation-assistance
+service** that helps US citizens settle into life in Paris. Built with **Next.js
 (App Router)**, **Tailwind CSS v4**, and **Lucide React** icons.
 
 ## Stack
@@ -33,7 +33,7 @@ npm start        # serve the production build
 ## Routes
 
 - `/`: home (hero, services overview, process, packages, testimonials, FAQ, contact form)
-- `/services`: detailed breakdown of each apartment-finding service, plus the packages
+- `/services`: detailed breakdown of each relocation service, plus the packages
 - `/about`: Jill's bio and photo, values, and stats
 
 ## Structure
@@ -67,7 +67,9 @@ lib/
 
 The form (`components/contact.tsx`) submits **directly from the visitor's browser**
 to [Web3Forms](https://web3forms.com), which emails each submission to
-**jillfindsyourparisapt@gmail.com**.
+the inbox the access key was created for (originally jillfindsyourparisapt@gmail.com;
+the public contact address is now hello.aplaceinparis@gmail.com, so the key should be
+replaced with one created for that inbox).
 
 - The Web3Forms **access key is public by design** and lives in `contact.tsx`
   (`WEB3FORMS_ACCESS_KEY`). To change the destination inbox or rotate the key,

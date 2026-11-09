@@ -1,8 +1,8 @@
 import { ArrowRight } from "lucide-react";
 
 export function CtaBand({
-  title = "Ready to start your search?",
-  description = "Book a free 30-minute discovery call. I'll talk through your timeline and map out the apartment hunt, with no obligation.",
+  title = "Ready to start your move?",
+  description = "Book a free 30-minute discovery call. I'll talk through your timeline and map out your move, with no obligation.",
 }: {
   title?: string;
   description?: string;

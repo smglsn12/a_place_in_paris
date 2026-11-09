@@ -1,7 +1,7 @@
 # A Place in Paris: notes for Claude
 
-Marketing site for Jill's one-person apartment-finding service for US citizens
-moving to Paris. Next.js (App Router) + Tailwind v4 + TypeScript. See README.md
+Marketing site for Jill's one-person relocation-assistance service for US
+citizens moving to Paris. Next.js (App Router) + Tailwind v4 + TypeScript. See README.md
 for structure and setup.
 
 ## How to talk to the user
@@ -29,6 +29,21 @@ for structure and setup.
   kindly in plain terms. Rephrase your own unclear questions rather than
   repeating them.
 - Don't repeat a tip they've already taken on board. At most one tip per reply.
+
+## Legal limits on what the site may claim
+Jill is not a licensed real estate agent, so under French law she may not
+find, search for, or negotiate apartments on a client's behalf. Never describe
+the business as "apartment finding" or say she finds, sources, shortlists,
+vets, or negotiates apartments, deals with landlords, or handles leases. Call
+it "relocation assistance". What she does offer:
+- Building the client's rental dossier (and guarantor setup like Garantme)
+- Pointing clients to the right apartment sites, setting up their profiles,
+  and showing them how to use the sites; the client searches and sends their
+  own inquiries
+- Touring apartments with or for the client once the client has found them
+  and inquired
+- Setting up utilities, wi-fi, and phone service; decorating help
+- General neighborhood guidance and orientation
 
 ## Voice and copy rules
 - The site speaks as Jill in the first person singular: "I", "my", "me".

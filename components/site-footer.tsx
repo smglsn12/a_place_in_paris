@@ -9,8 +9,8 @@ export function SiteFooter() {
           <div className="max-w-sm">
             <Logo inverted />
             <p className="mt-4 text-sm leading-relaxed text-cream/60">
-              A boutique apartment-finding service helping US citizens find the
-              right home in Paris, personally, one client at a time.
+              A boutique relocation service helping US citizens settle into life
+              in Paris, personally, one client at a time.
             </p>
           </div>
 
@@ -33,15 +33,15 @@ export function SiteFooter() {
             <h3 className="text-xs font-semibold tracking-[0.18em] text-gold-soft uppercase">
               Get in touch
             </h3>
-            <a href="mailto:jillfindsyourparisapt@gmail.com" className="text-sm text-cream/70 transition-colors hover:text-cream">
-              jillfindsyourparisapt@gmail.com
+            <a href="mailto:hello.aplaceinparis@gmail.com" className="text-sm text-cream/70 transition-colors hover:text-cream">
+              hello.aplaceinparis@gmail.com
             </a>
           </div>
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-cream/10 pt-6 text-xs text-cream/50 sm:flex-row">
           <p>© {2026} A Place in Paris. All rights reserved.</p>
-          <p>Independent apartment-finding service for newcomers to Paris.</p>
+          <p>Independent relocation assistance for newcomers to Paris.</p>
         </div>
       </div>
     </footer>

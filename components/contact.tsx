@@ -4,7 +4,8 @@ import { useState } from "react";
 import { AlertCircle, ArrowRight, CheckCircle2, Loader2, Mail } from "lucide-react";
 
 // Public Web3Forms access key. Submissions are delivered straight to
-// jillfindsyourparisapt@gmail.com. This key is meant to live in client code
+// the inbox the key was created for (originally jillfindsyourparisapt@gmail.com;
+// replace the key with one made for hello.aplaceinparis@gmail.com). This key is meant to live in client code
 // (that's how Web3Forms works); rotate or replace it anytime at web3forms.com.
 const WEB3FORMS_ACCESS_KEY = "2ba653c6-d321-4336-a951-753ff48ed0f3";
 
@@ -47,7 +48,7 @@ export function Contact() {
       setSubmitted(true);
     } catch {
       setError(
-        "We couldn't send your message. Please try again, or email jillfindsyourparisapt@gmail.com directly.",
+        "We couldn't send your message. Please try again, or email hello.aplaceinparis@gmail.com directly.",
       );
     } finally {
       setSubmitting(false);
@@ -77,8 +78,8 @@ export function Contact() {
             <ul className="relative flex flex-col gap-4 text-sm">
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-gold-soft" />
-                <a href="mailto:jillfindsyourparisapt@gmail.com" className="hover:underline">
-                  jillfindsyourparisapt@gmail.com
+                <a href="mailto:hello.aplaceinparis@gmail.com" className="hover:underline">
+                  hello.aplaceinparis@gmail.com
                 </a>
               </li>
             </ul>

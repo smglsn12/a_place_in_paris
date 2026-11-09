@@ -21,18 +21,19 @@ export function Hero() {
         <div className="animate-fade-up">
           <span className="inline-flex items-center gap-2 rounded-full border border-ink/10 bg-cream-100/70 px-4 py-1.5 text-xs font-medium text-ink-soft">
             <Sparkles size={13} className="text-gold" />
-            Boutique apartment finding in Paris
+            Boutique relocation assistance in Paris
           </span>
 
           <h1 className="mt-6 font-serif text-4xl leading-[1.05] font-semibold text-balance sm:text-5xl md:text-6xl">
-            Your Paris apartment,
-            <span className="block text-brand italic">found for you.</span>
+            Your move to Paris,
+            <span className="block text-brand italic">made simple.</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-mist text-pretty">
-            I&apos;m Jill. I help US citizens find the right apartment in Paris.
-            From narrowing down neighborhoods to signing the lease, I handle the
-            hunt so you can focus on the exciting part: your new life here.
+            I&apos;m Jill. I help US citizens settle into life in Paris. From
+            preparing your rental dossier and coaching your apartment search to
+            touring apartments and setting up your wi-fi, I&apos;m with you every step
+            so you can focus on the exciting part: your new life here.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -69,8 +70,8 @@ export function Hero() {
 
 function HeroCard() {
   const stats = [
-    { value: "2", label: "Clients placed" },
-    { value: "100%", label: "Found their home" },
+    { value: "2", label: "Clients helped" },
+    { value: "100%", label: "Settled in" },
     { value: "1.5 yrs", label: "Living in Paris" },
   ];
 

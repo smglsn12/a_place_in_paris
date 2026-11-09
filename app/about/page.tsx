@@ -7,7 +7,7 @@ import { CtaBand } from "@/components/cta-band";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Meet Jill, the apartment finder behind A Place in Paris. A US immigrant with a business degree and real estate background, helping fellow Americans find their home in Paris.",
+    "Meet Jill, the relocation assistant behind A Place in Paris. A US immigrant with a business degree and real estate background, helping fellow Americans settle into life in Paris.",
 };
 
 export default function AboutPage() {
@@ -15,8 +15,8 @@ export default function AboutPage() {
     <main>
       <PageHero
         eyebrow="About"
-        title="Meet your Paris apartment finder"
-        description="A Place in Paris is a personal service: just me, helping fellow Americans find a home in the city I've come to love."
+        title="Meet your Paris relocation assistant"
+        description="A Place in Paris is a personal service: just me, helping fellow Americans make a home in the city I've come to love."
       />
 
       {/* Bio + photo */}
@@ -44,7 +44,7 @@ export default function AboutPage() {
               With a business degree from San Francisco State University,
               including extensive real estate coursework, and my several months
               of experience navigating the apartment hunt space in Paris as a US
-              immigrant, I am ready to help you find your home in Paris!
+              immigrant, I am ready to help you make Paris your home!
             </p>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function AboutPage() {
               What guides me
             </span>
             <h2 className="mt-5 font-serif text-3xl leading-tight font-semibold text-ink sm:text-4xl">
-              The principles behind every search
+              The principles behind everything I do
             </h2>
           </div>
 
@@ -106,7 +106,7 @@ export default function AboutPage() {
       </section>
 
       <CtaBand
-        title="Let's find your place in Paris"
+        title="Let's get you settled in Paris"
         description="Whether you're months out or already packing, a short call is the best first step. I'd love to hear where you're headed."
       />
     </main>

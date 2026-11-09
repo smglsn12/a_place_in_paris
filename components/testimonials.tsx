@@ -8,8 +8,8 @@ export function Testimonials() {
       <div className="container-page">
         <SectionHeading
           eyebrow="Client stories"
-          title="Keys handed over, glasses raised"
-          description="The first clients who now call a Paris apartment home."
+          title="Settled in, glasses raised"
+          description="The first clients who now call Paris home."
         />
 
         <div className="mx-auto mt-14 grid max-w-2xl gap-6">

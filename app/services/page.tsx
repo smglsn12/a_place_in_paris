@@ -8,7 +8,7 @@ import { CtaBand } from "@/components/cta-band";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "How I find your Paris apartment: neighborhood matching, listing search, in-person viewings, rental dossier and lease support, guarantor solutions, and move-in help.",
+    "How I help you move to Paris: neighborhood guidance, rental dossier and guarantor setup, apartment-search coaching, apartment tours, utilities, wi-fi and phone setup, and decorating.",
 };
 
 export default function ServicesPage() {
@@ -16,8 +16,8 @@ export default function ServicesPage() {
     <main>
       <PageHero
         eyebrow="How I help"
-        title="Every step of the apartment hunt, handled"
-        description="Pick the help you need or hand me the whole search. Here's exactly what each part of finding your Paris apartment looks like when I run it for you."
+        title="Every step of your move, supported"
+        description="Pick the help you need or bring me in for your whole move. Here's exactly what each service looks like."
       />
 
       <section className="pb-8">
