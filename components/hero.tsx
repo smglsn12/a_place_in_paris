@@ -154,8 +154,11 @@ function ParisDusk() {
           <path d="M197.8 43 H202.2 Q203.5 95 210 132 H190 Q196.5 95 197.8 43 Z" />
           {/* second platform */}
           <rect x="186" y="130" width="28" height="4.5" />
-          {/* middle section */}
-          <path d="M189 134.5 H211 Q216 152 223 166 H177 Q184 152 189 134.5 Z" />
+          {/* middle section, hollow in the center */}
+          <path
+            fillRule="evenodd"
+            d="M189 134.5 H211 Q216 152 223 166 H177 Q184 152 189 134.5 Z M196.5 138 H203.5 Q207.5 151 213.5 164 H186.5 Q192.5 151 196.5 138 Z"
+          />
           {/* first platform */}
           <rect x="171" y="164" width="58" height="5" />
           {/* legs and arch */}
