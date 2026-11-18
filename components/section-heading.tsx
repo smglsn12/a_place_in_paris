@@ -2,40 +2,29 @@ export function SectionHeading({
   eyebrow,
   title,
   description,
-  align = "center",
   inverted = false,
 }: {
   eyebrow: string;
   title: string;
   description?: string;
-  align?: "center" | "left";
   inverted?: boolean;
 }) {
   return (
-    <div
-      className={`flex max-w-2xl flex-col gap-4 ${
-        align === "center" ? "mx-auto items-center text-center" : "items-start text-left"
-      }`}
-    >
-      <span
-        className={`inline-flex items-center gap-2 text-xs font-semibold tracking-[0.22em] uppercase ${
-          inverted ? "text-gold-soft" : "text-gold"
-        }`}
-      >
-        <span className="h-px w-8 bg-current opacity-60" />
+    <div className="flex max-w-5xl flex-col items-start gap-5 text-left">
+      <span className={`text-sm sm:text-base ${inverted ? "text-white/75" : "text-mist"}`}>
         {eyebrow}
       </span>
       <h2
-        className={`font-serif text-3xl leading-tight font-semibold text-balance sm:text-4xl md:text-[2.75rem] ${
-          inverted ? "text-cream" : "text-ink"
+        className={`font-serif text-5xl leading-[1.02] text-balance sm:text-6xl lg:text-7xl xl:text-[5.5rem] ${
+          inverted ? "text-white" : "text-ink"
         }`}
       >
         {title}
       </h2>
       {description && (
         <p
-          className={`text-base leading-relaxed text-pretty sm:text-lg ${
-            inverted ? "text-cream/70" : "text-mist"
+          className={`max-w-2xl text-lg leading-relaxed text-pretty ${
+            inverted ? "text-white/85" : "text-ink-soft"
           }`}
         >
           {description}

@@ -20,32 +20,30 @@ export default function ServicesPage() {
         description="Pick the help you need or bring me in for your whole move. Here's exactly what each service looks like."
       />
 
-      <section className="pb-8">
-        <div className="container-page flex flex-col gap-px overflow-hidden rounded-3xl border border-ink/10 bg-ink/10">
-          {SERVICES.map((service, i) => (
+      <section className="bg-white py-12 sm:py-16">
+        <div className="container-page">
+          {SERVICES.map((service) => (
             <article
               key={service.title}
-              className="grid items-start gap-8 bg-cream p-8 sm:p-10 lg:grid-cols-[1fr_1.4fr] lg:gap-14"
+              className="grid items-start gap-8 border-b border-ink/20 py-14 last:border-b-0 sm:py-16 lg:grid-cols-[1fr_1.3fr] lg:gap-20"
             >
-              <div className={i % 2 === 1 ? "lg:order-2" : ""}>
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-ink text-cream">
-                  <service.icon size={26} strokeWidth={1.8} />
-                </span>
-                <h2 className="mt-5 font-serif text-2xl font-semibold text-ink sm:text-3xl">
+              <div>
+                <service.icon size={28} strokeWidth={1.5} className="text-brand" />
+                <h2 className="mt-5 font-serif text-4xl leading-tight text-ink sm:text-5xl">
                   {service.title}
                 </h2>
-                <p className="mt-3 leading-relaxed text-mist">{service.description}</p>
+                <p className="mt-4 text-lg leading-relaxed text-ink-soft">{service.description}</p>
               </div>
 
-              <div className={i % 2 === 1 ? "lg:order-1" : ""}>
-                <p className="leading-relaxed text-ink-soft">{service.detail}</p>
-                <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+              <div className="lg:pt-12">
+                <p className="text-lg leading-relaxed text-ink">{service.detail}</p>
+                <ul className="mt-8 grid gap-x-8 sm:grid-cols-2">
                   {service.points.map((point) => (
                     <li
                       key={point}
-                      className="flex items-start gap-2.5 rounded-xl border border-ink/10 bg-white px-4 py-3 text-sm text-ink-soft"
+                      className="flex items-start gap-2.5 border-t border-ink/15 py-3 text-[0.95rem] text-ink-soft"
                     >
-                      <Check size={16} className="mt-0.5 shrink-0 text-gold" strokeWidth={2.5} />
+                      <Check size={16} className="mt-1 shrink-0 text-brand" strokeWidth={2} />
                       {point}
                     </li>
                   ))}

@@ -4,62 +4,45 @@ import { SectionHeading } from "./section-heading";
 
 export function Packages() {
   return (
-    <section id="packages" className="scroll-mt-20 py-20 sm:py-28">
+    <section id="packages" className="scroll-mt-20 bg-brand py-24 text-white sm:py-32">
       <div className="container-page">
         <SectionHeading
           eyebrow="Packages"
           title="Choose how much you'd like me to handle"
           description="Three ways to work together. Tell me what you need and I'll send a quote. Third-party costs like deposits and agency fees are always separate and never marked up."
+          inverted
         />
 
-        <div className="mt-14 grid items-start gap-6 lg:grid-cols-3">
+        <div className="mt-20 grid gap-16 lg:grid-cols-3 lg:gap-10">
           {PACKAGES.map((pkg) => (
-            <div
-              key={pkg.name}
-              className={`relative flex h-full flex-col rounded-2xl border p-8 ${
-                pkg.featured
-                  ? "border-ink bg-ink text-cream shadow-card lg:-mt-4 lg:pb-12"
-                  : "border-ink/10 bg-white text-ink"
-              }`}
-            >
+            <div key={pkg.name} className="relative flex flex-col border-t border-white/50 pt-8">
               {pkg.featured && (
-                <span className="absolute -top-3 left-8 inline-flex items-center gap-1.5 rounded-full bg-gold px-3 py-1 text-xs font-semibold text-ink">
+                <span className="absolute -top-3.5 left-0 inline-flex items-center gap-1.5 bg-white px-3 py-1 text-xs font-medium text-brand">
                   <Sparkles size={13} /> Most popular
                 </span>
               )}
 
-              <h3 className="font-serif text-2xl font-semibold">{pkg.name}</h3>
-              <p
-                className={`mt-1.5 text-sm ${
-                  pkg.featured ? "text-cream/70" : "text-mist"
-                }`}
-              >
-                {pkg.tagline}
-              </p>
+              <h3 className="font-serif text-4xl leading-tight sm:text-5xl">{pkg.name}</h3>
+              <p className="mt-3 text-lg text-white/85">{pkg.tagline}</p>
 
-              <ul className="mt-7 flex flex-1 flex-col gap-3">
+              <ul className="mt-8 flex flex-1 flex-col">
                 {pkg.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2.5 text-sm">
-                    <Check
-                      size={16}
-                      strokeWidth={2.5}
-                      className={`mt-0.5 shrink-0 ${
-                        pkg.featured ? "text-gold-soft" : "text-gold"
-                      }`}
-                    />
-                    <span className={pkg.featured ? "text-cream/85" : "text-ink-soft"}>
-                      {feature}
-                    </span>
+                  <li
+                    key={feature}
+                    className="flex items-start gap-2.5 border-t border-white/20 py-3 text-[0.95rem] text-white/90"
+                  >
+                    <Check size={16} strokeWidth={2} className="mt-1 shrink-0" />
+                    {feature}
                   </li>
                 ))}
               </ul>
 
               <a
                 href="/#contact"
-                className={`mt-8 inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-transform hover:-translate-y-0.5 ${
+                className={`mt-8 inline-flex items-center justify-center px-6 py-4 text-base font-medium transition-colors ${
                   pkg.featured
-                    ? "bg-cream text-ink"
-                    : "bg-ink text-cream"
+                    ? "bg-white text-brand hover:bg-fog"
+                    : "border border-white text-white hover:bg-white hover:text-brand"
                 }`}
               >
                 Request a quote

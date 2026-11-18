@@ -3,26 +3,24 @@ import { Logo } from "./logo";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-cream/10 bg-ink text-cream">
-      <div className="container-page py-14">
-        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
+    <footer className="bg-brand text-white">
+      <div className="container-page py-16 sm:py-20">
+        <div className="grid gap-12 md:grid-cols-[1.6fr_1fr_1fr]">
           <div className="max-w-sm">
-            <Logo inverted />
-            <p className="mt-4 text-sm leading-relaxed text-cream/60">
+            <Logo />
+            <p className="mt-5 leading-relaxed text-white/80">
               A boutique relocation service helping US citizens settle into life
               in Paris, personally, one client at a time.
             </p>
           </div>
 
           <nav className="flex flex-col gap-3">
-            <h3 className="text-xs font-semibold tracking-[0.18em] text-gold-soft uppercase">
-              Explore
-            </h3>
+            <h3 className="text-sm text-white/65">Explore</h3>
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-cream/70 transition-colors hover:text-cream"
+                className="w-fit text-base underline-offset-4 hover:underline"
               >
                 {link.label}
               </a>
@@ -30,16 +28,17 @@ export function SiteFooter() {
           </nav>
 
           <div className="flex flex-col gap-3">
-            <h3 className="text-xs font-semibold tracking-[0.18em] text-gold-soft uppercase">
-              Get in touch
-            </h3>
-            <a href="mailto:hello.aplaceinparis@gmail.com" className="text-sm text-cream/70 transition-colors hover:text-cream">
+            <h3 className="text-sm text-white/65">Get in touch</h3>
+            <a
+              href="mailto:hello.aplaceinparis@gmail.com"
+              className="w-fit text-base underline-offset-4 hover:underline"
+            >
               hello.aplaceinparis@gmail.com
             </a>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-cream/10 pt-6 text-xs text-cream/50 sm:flex-row">
+        <div className="mt-16 flex flex-col items-start justify-between gap-3 border-t border-white/25 pt-6 text-sm text-white/70 sm:flex-row sm:items-center">
           <p>© {2026} A Place in Paris. All rights reserved.</p>
           <p>Independent relocation assistance for newcomers to Paris.</p>
         </div>

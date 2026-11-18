@@ -61,8 +61,8 @@ it "relocation assistance". What she does offer:
   `cta-band.tsx` like `/about` and `/services`), and add the link to
   `components/site-header.tsx` (desktop and mobile menus) and
   `components/site-footer.tsx`.
-- Use the design tokens in `app/globals.css` (`ink`, `brand`, `cream`, `gold`,
-  `mist`); don't introduce raw hex colors.
+- Use the design tokens in `app/globals.css` (`ink`, `brand`, `fog`, `mist`,
+  plus `cream`/`gold` in the hero illustration); don't introduce raw hex colors.
 - Check every change with `npm run build` before committing. It must pass.
 
 ## Pushing to GitHub

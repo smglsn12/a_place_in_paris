@@ -23,58 +23,68 @@ export function SiteHeader() {
     };
   }, [open]);
 
+  // Every page opens on a dark band, so the bar starts see-through with white
+  // text and turns solid white once the visitor scrolls (or opens the menu).
+  const solid = scrolled || open;
+
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "border-b border-ink/10 bg-cream/85 backdrop-blur-md"
-          : "border-b border-transparent bg-transparent"
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+        solid
+          ? "border-b border-ink/10 bg-white text-ink"
+          : "border-b border-transparent bg-transparent text-white"
       }`}
     >
-      <div className="container-page flex h-18 items-center justify-between py-4">
+      <div className="container-page flex h-20 items-center justify-between gap-8">
         <a href="/" className="z-50" aria-label="A Place in Paris, home">
           <Logo />
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-ink-soft transition-colors hover:text-ink"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
+        <div className="hidden items-center gap-10 lg:flex">
+          <nav className="flex items-center gap-8">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-[0.95rem] underline-offset-4 hover:underline"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
 
-        <a
-          href="/#contact"
-          className="hidden rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-cream shadow-soft transition-transform hover:-translate-y-0.5 md:inline-flex"
-        >
-          Book a discovery call
-        </a>
+          <a
+            href="/#contact"
+            className={`px-5 py-2.5 text-sm font-medium transition-colors ${
+              solid
+                ? "bg-ink text-white hover:bg-brand"
+                : "bg-white text-ink hover:bg-fog"
+            }`}
+          >
+            Book a discovery call
+          </a>
+        </div>
 
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="z-50 -mr-2 inline-flex h-10 w-10 items-center justify-center rounded-full text-ink md:hidden"
+          className="z-50 -mr-2 inline-flex h-10 w-10 items-center justify-center lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
-          {open ? <X size={22} /> : <Menu size={22} />}
+          {open ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
         </button>
       </div>
 
       {open && (
-        <div className="fixed inset-0 top-0 z-40 flex flex-col bg-cream px-6 pt-24 pb-10 md:hidden">
-          <nav className="flex flex-col gap-2">
+        <div className="fixed inset-0 top-0 z-40 flex flex-col bg-white px-6 pt-24 pb-10 text-ink lg:hidden">
+          <nav className="flex flex-col">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="border-b border-ink/10 py-4 font-serif text-2xl text-ink"
+                className="border-b border-ink/15 py-4 font-serif text-4xl"
               >
                 {link.label}
               </a>
@@ -83,7 +93,7 @@ export function SiteHeader() {
           <a
             href="/#contact"
             onClick={() => setOpen(false)}
-            className="mt-8 rounded-full bg-ink px-5 py-3.5 text-center text-base font-semibold text-cream"
+            className="mt-8 bg-ink px-5 py-4 text-center text-base font-medium text-white"
           >
             Book a discovery call
           </a>

@@ -1,45 +1,36 @@
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+
+const STATS = [
+  { value: "2", label: "Clients helped" },
+  { value: "100%", label: "Settled in" },
+  { value: "1.5 yrs", label: "Living in Paris" },
+];
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">
-      {/* Decorative backdrop */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-32 -right-24 h-[34rem] w-[34rem] rounded-full bg-gold/10 blur-3xl" />
-        <div className="absolute -bottom-40 -left-32 h-[30rem] w-[30rem] rounded-full bg-brand/10 blur-3xl" />
-        <div
-          className="absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 1px 1px, var(--color-ink) 1px, transparent 0)",
-            backgroundSize: "32px 32px",
-          }}
-        />
-      </div>
+    <>
+      <section
+        id="top"
+        className="relative flex min-h-[100svh] flex-col justify-end overflow-hidden bg-ink pt-32 pb-14 text-white sm:pb-20"
+      >
+        {/* Full-screen Paris at dusk, darkened toward the bottom so the headline reads clearly */}
+        <ParisDusk />
+        <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-ink/85 via-ink/30 to-transparent" />
 
-      <div className="container-page grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="animate-fade-up">
-          <span className="inline-flex items-center gap-2 rounded-full border border-ink/10 bg-cream-100/70 px-4 py-1.5 text-xs font-medium text-ink-soft">
-            <Sparkles size={13} className="text-gold" />
+        <div className="container-page relative animate-fade-up">
+          <p className="text-sm text-white/80 sm:text-base">
             Boutique relocation assistance in Paris
-          </span>
-
-          <h1 className="mt-6 font-serif text-4xl leading-[1.05] font-semibold text-balance sm:text-5xl md:text-6xl">
-            Your move to Paris,
-            <span className="block text-brand italic">made simple.</span>
-          </h1>
-
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-mist text-pretty">
-            I&apos;m Jill. I help US citizens settle into life in Paris. From
-            preparing your rental dossier and coaching your apartment search to
-            touring apartments and setting up your wi-fi, I&apos;m with you every step
-            so you can focus on the exciting part: your new life here.
           </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <h1 className="mt-4 font-serif text-6xl leading-[0.95] text-balance sm:text-7xl md:text-8xl lg:text-[8.5rem]">
+            Your move to Paris,
+            <span className="block italic">made simple.</span>
+          </h1>
+
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
               href="#contact"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-ink px-7 py-3.5 text-base font-semibold text-cream shadow-soft transition-transform hover:-translate-y-0.5"
+              className="group inline-flex items-center justify-center gap-2 bg-white px-7 py-4 text-base font-medium text-ink transition-colors hover:bg-fog"
             >
               Book a free discovery call
               <ArrowRight
@@ -49,55 +40,40 @@ export function Hero() {
             </a>
             <a
               href="#services"
-              className="inline-flex items-center justify-center rounded-full border border-ink/15 px-7 py-3.5 text-base font-semibold text-ink transition-colors hover:bg-cream-100"
+              className="inline-flex items-center justify-center border border-white/70 px-7 py-4 text-base font-medium text-white transition-colors hover:bg-white hover:text-ink"
             >
               Explore my services
             </a>
           </div>
 
-          <p className="mt-6 text-sm text-mist">
+          <p className="mt-6 text-sm text-white/70">
             No obligation · 30 minutes · A real conversation with Jill
           </p>
         </div>
+      </section>
 
-        <div className="animate-fade-up [animation-delay:120ms]">
-          <HeroCard />
-        </div>
-      </div>
-    </section>
-  );
-}
+      <section className="bg-fog py-20 sm:py-28">
+        <div className="container-page">
+          <p className="font-serif text-3xl leading-[1.15] text-ink text-pretty sm:text-4xl lg:text-[3.25rem]">
+            I&apos;m Jill. I help US citizens settle into life in Paris. From
+            preparing your rental dossier and coaching your apartment search to
+            touring apartments and setting up your wi-fi, I&apos;m with you every step
+            so you can focus on the exciting part: your new life here.
+          </p>
 
-function HeroCard() {
-  const stats = [
-    { value: "2", label: "Clients helped" },
-    { value: "100%", label: "Settled in" },
-    { value: "1.5 yrs", label: "Living in Paris" },
-  ];
-
-  return (
-    <div className="relative mx-auto max-w-md">
-      <div className="absolute -inset-3 -z-10 rotate-3 rounded-[2rem] bg-brand/5" />
-      <div className="overflow-hidden rounded-[1.75rem] border border-ink/10 bg-white shadow-card">
-        {/* Paris at dusk: Eiffel Tower framed by Haussmann rooftops */}
-        <div className="relative h-60">
-          <ParisDusk />
-        </div>
-
-        <div className="grid grid-cols-3 divide-x divide-ink/10 border-t border-ink/10">
-          {stats.map((s) => (
-            <div key={s.label} className="px-3 py-5 text-center">
-              <div className="font-serif text-2xl font-semibold text-ink">
-                {s.value}
+          <div className="mt-14 grid grid-cols-3 border-t border-ink/20 sm:mt-20">
+            {STATS.map((s) => (
+              <div key={s.label} className="pt-6 pr-4">
+                <div className="font-serif text-5xl leading-none text-ink sm:text-6xl">
+                  {s.value}
+                </div>
+                <div className="mt-3 text-sm text-ink-soft sm:text-base">{s.label}</div>
               </div>
-              <div className="mt-1 text-[0.7rem] leading-tight text-mist">
-                {s.label}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 }
 

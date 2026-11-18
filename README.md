@@ -10,15 +10,17 @@ service** that helps US citizens settle into life in Paris. Built with **Next.js
 - **Tailwind CSS v4**: design tokens defined in `app/globals.css` via `@theme`
 - **Lucide React**: iconography
 - **TypeScript**: strict mode
-- Google Fonts via `next/font`: Playfair Display (serif display) + Inter (sans body)
+- Google Fonts via `next/font`: Instrument Serif (condensed serif display) + Inter (sans body)
 
 ## Design system
 
 Defined as Tailwind theme tokens in `app/globals.css`:
 
-- **Palette**: Parisian midnight blue (`ink`/`brand`), warm ivory (`cream`),
-  brass-gold accent (`gold`), with `mist` for muted text.
-- **Type**: editorial serif headings paired with a clean sans body.
+- **Palette**: white pages with soft-gray bands (`fog`), French blue bands and
+  accents (`brand`), near-black navy text (`ink`), with `mist` for muted text.
+  `cream`, `gold`, and `terracotta` color the hero illustration.
+- **Type**: very large condensed serif headings paired with a clean sans body;
+  square-cornered buttons, hairline dividers, no cards or shadows.
 - **Motion**: a subtle `fade-up` entrance animation.
 
 ## Getting started
@@ -47,7 +49,7 @@ app/
   globals.css         Tailwind import + @theme design tokens
 components/
   site-header.tsx     Sticky, scroll-aware nav with mobile menu
-  hero.tsx            Hero + stat card (inline SVG skyline)
+  hero.tsx            Full-screen hero (inline SVG Paris illustration) + intro band with stats
   services.tsx        Six service cards (home overview)
   process.tsx         Four-step "how it works" band
   packages.tsx        Three service packages (quote-based)
